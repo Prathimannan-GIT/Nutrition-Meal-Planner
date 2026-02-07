@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | Nutri Planner</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { emerald: { 500: '#10b981', 600: '#059669' } }, fontFamily: { outfit: ['Outfit', 'sans-serif'], inter: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 flex items-center justify-center min-h-screen p-4 py-12">
+
+    <div class="max-w-md w-full animate-fade-in-up">
+        <div class="card p-10 space-y-8 flex flex-col items-center">
+            <!-- Branding -->
+            <!-- Branding -->
+            <a href="index.html" class="flex items-center gap-3 decoration-none">
+                <img src="assets/logo.png" alt="Logo" class="w-10 h-10">
+                <span class="text-2xl font-bold text-emerald-600 dark:text-emerald-400">Nutri Planner</span>
+            </a>
+
+            <div class="text-center space-y-2">
+                <h1 class="text-2xl">Join the community</h1>
+                <p class="text-sm text-slate-500">Plan smarter. Eat better. Live healthier.</p>
+            </div>
+
+            <form class="w-full space-y-4">
+                <div class="space-y-2">
+                    <label class="text-xs font-bold uppercase text-slate-500">Full Name</label>
+                    <input type="text" placeholder="John Doe"
+                        class="w-full h-12 px-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-transparent outline-none focus:ring-2 focus:ring-emerald-500 transition-all">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-xs font-bold uppercase text-slate-500">Email Address</label>
+                    <input type="email" placeholder="name@company.com"
+                        class="w-full h-12 px-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-transparent outline-none focus:ring-2 focus:ring-emerald-500 transition-all">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-xs font-bold uppercase text-slate-500">Password</label>
+                    <input type="password" placeholder="••••••••"
+                        class="w-full h-12 px-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-transparent outline-none focus:ring-2 focus:ring-emerald-500 transition-all">
+                </div>
+                <p class="text-[10px] text-slate-400">By signing up, you agree to our Terms of Service and Privacy
+                    Policy.</p>
+                <a href="dashboard.html" class="btn btn-primary w-full shadow-lg shadow-emerald-500/20">Create Free
+                    Account</a>
+            </form>
+
+            <div class="w-full flex items-center gap-4 text-slate-400 text-xs">
+                <div class="flex-1 h-px bg-slate-200 dark:bg-slate-800"></div>
+                OR
+                <div class="flex-1 h-px bg-slate-200 dark:bg-slate-800"></div>
+            </div>
+
+            <div class="w-full">
+                <button
+                    class="btn border border-slate-200 dark:border-slate-800 gap-2 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors text-sm w-full">
+                    <img src="https://www.svgrepo.com/show/355037/google.svg" class="w-5 h-5" alt="Google"> Sign up with
+                    Google
+                </button>
+            </div>
+
+            <p class="text-center text-sm text-slate-500">
+                Already have an account? <a href="login.html" class="text-emerald-500 font-bold">Sign in</a>
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

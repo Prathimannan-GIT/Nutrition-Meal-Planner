@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works | Nutri Planner</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { emerald: { 500: '#10b981', 600: '#059669' } }, fontFamily: { outfit: ['Outfit', 'sans-serif'], inter: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="pt-[80px]">
+    <section class="py-20">
+        <div class="container max-w-4xl text-center space-y-6">
+            <h1 class="font-outfit text-4xl md:text-6xl">Getting started is <span
+                    class="text-emerald-500">simple.</span></h1>
+            <p class="text-lg text-slate-600 dark:text-slate-400">Follow these four easy steps to transform your
+                relationship with food and achieve your physical peak.</p>
+        </div>
+    </section>
+
+    <section class="py-20 relative">
+        <div class="container">
+            <div class="space-y-32">
+                <!-- Step 1 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-6">
+                        <span
+                            class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500 text-white font-bold text-xl">1</span>
+                        <h2 class="text-3xl">Set Your Goals</h2>
+                        <p class="text-slate-600 dark:text-slate-400">Tell us what you want to achieve. Whether it's
+                            shedding pounds, building boulder shoulders, or just eating cleaner—we tailor everything to
+                            your endgame.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2"><span class="text-emerald-500">✓</span> Target Weight
+                                Selection</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-500">✓</span> Activity Level
+                                Input</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-500">✓</span> Timeline
+                                Estimates</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="bg-slate-100 dark:bg-slate-800 rounded-3xl aspect-[4/3] flex items-center justify-center border border-slate-200 dark:border-slate-700">
+                        <span class="text-slate-400 italic">Goal Profile Mockup</span>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div
+                        class="bg-slate-100 dark:bg-slate-800 rounded-3xl aspect-[4/3] flex items-center justify-center border border-slate-200 dark:border-slate-700 order-2 lg:order-1">
+                        <span class="text-slate-400 italic">Preference Selector Mockup</span>
+                    </div>
+                    <div class="space-y-6 order-1 lg:order-2">
+                        <span
+                            class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500 text-white font-bold text-xl">2</span>
+                        <h2 class="text-3xl">Pick Preferences</h2>
+                        <p class="text-slate-600 dark:text-slate-400">Hate cilantro? Allergic to peanuts? Following a
+                            strict Keto diet? Select your filters and our AI will only suggest meals you'll actually
+                            love.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2"><span class="text-emerald-500">✓</span> 50+ Dietary
+                                Filters</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-500">✓</span> Allergy
+                                Safeguards</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-500">✓</span> Taste Profile
+                                Matching</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-6">
+                        <span
+                            class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500 text-white font-bold text-xl">3</span>
+                        <h2 class="text-3xl">Generate & Shop</h2>
+                        <p class="text-slate-600 dark:text-slate-400">One click generates a full week of meals. The app
+                            automatically creates a consolidated grocery list, sorted by aisle, saving you hours at the
+                            store.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2"><span class="text-emerald-500">✓</span> Instant Weekly
+                                Plans</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-500">✓</span> Smart Shopping
+                                Lists</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-500">✓</span> Budget-Friendly
+                                Options</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="bg-slate-100 dark:bg-slate-800 rounded-3xl aspect-[4/3] flex items-center justify-center border border-slate-200 dark:border-slate-700">
+                        <span class="text-slate-400 italic">Shopping List Mockup</span>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div
+                        class="bg-slate-100 dark:bg-slate-800 rounded-3xl aspect-[4/3] flex items-center justify-center border border-slate-200 dark:border-slate-700 order-2 lg:order-1">
+                        <span class="text-slate-400 italic">Progress Graph Mockup</span>
+                    </div>
+                    <div class="space-y-6 order-1 lg:order-2">
+                        <span
+                            class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500 text-white font-bold text-xl">4</span>
+                        <h2 class="text-3xl">Track Results</h2>
+                        <p class="text-slate-600 dark:text-slate-400">As you log your meals and weight, our system
+                            recalibrates your plan in real-time to ensure you stay on track for your goal date.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2"><span class="text-emerald-500">✓</span> Dynamic
+                                Recalibration</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-500">✓</span> Achievement
+                                Badges</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-500">✓</span> Community
+                                Challenges</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white dark:bg-slate-950">
+        <div class="container">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+                <div class="space-y-8">
+                    <h2 class="text-4xl font-outfit">The Science of <span class="text-emerald-500">Process.</span></h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-400">Our methodology is rooted in clinical
+                        nutrition and behavioral psychology to ensure that your progress is both scientifically
+                        effective and mentally sustainable.</p>
+
+                    <div class="space-y-6">
+                        <div class="flex gap-6">
+                            <div
+                                class="w-12 h-12 shrink-0 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 rounded-2xl flex items-center justify-center font-bold">
+                                A</div>
+                            <div class="space-y-2">
+                                <h4 class="text-xl">Thermic Effect Tracking</h4>
+                                <p class="text-slate-500 text-sm italic">We calculate the energy required for digestion
+                                    per specific food type to refine your net caloric needs.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div
+                                class="w-12 h-12 shrink-0 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-2xl flex items-center justify-center font-bold">
+                                B</div>
+                            <div class="space-y-2">
+                                <h4 class="text-xl">Glycemic Index Optimization</h4>
+                                <p class="text-slate-500 text-sm italic">Plans are ordered to minimize insulin spikes
+                                    throughout the day, ensuring consistent energy levels.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <h3 class="text-2xl font-outfit mb-8">Process FAQs</h3>
+                    <div class="space-y-4">
+                        <div
+                            class="p-6 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+                            <p class="font-bold mb-2">How long does it take to see results?</p>
+                            <p class="text-sm text-slate-500">Most users report visible energy improvements within 7
+                                days and weight changes within 14-21 days of following their plan.</p>
+                        </div>
+                        <div
+                            class="p-6 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+                            <p class="font-bold mb-2">Can I swap recipes manually?</p>
+                            <p class="text-sm text-slate-500">Yes! Our 'Smart Swap' feature allows you to change a meal
+                                while the AI instantly recalculates your daily totals to keep you on track.</p>
+                        </div>
+                        <div
+                            class="p-6 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+                            <p class="font-bold mb-2">Do I need to buy supplements?</p>
+                            <p class="text-sm text-slate-500">Our plans prioritize whole-food nutrition. Supplements are
+                                only recommended if our AI detects a recurring micronutrient gap in your logs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-emerald-600 text-white text-center">
+        <div class="container space-y-8">
+            <h2 class="text-4xl text-white">Your transformation starts today.</h2>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="signup.html" class="btn bg-white text-emerald-600 hover:bg-slate-100 px-12 text-lg">Start My
+                    Journey</a>
+                <a href="features.html" class="btn border-2 border-white/30 hover:bg-white/10 px-12 text-lg">See All
+                    Features</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="layout.js"></script>
+</body>
+
+</html>

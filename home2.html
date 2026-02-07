@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Your Body | Nutri Planner</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { emerald: { 500: '#10b981', 600: '#059669' } },
+                    fontFamily: { outfit: ['Outfit', 'sans-serif'], inter: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="pt-[80px]">
+
+    <!-- Animated Hero Section -->
+    <section class="relative min-h-screen flex items-center overflow-hidden text-white">
+        <!-- 4K Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://cdn.outsideonline.com/wp-content/uploads/2017/06/23/basic-health-fitness-skate-surf_h.jpg?auto=webp&width=3840&quality=75&fit=cover"
+                alt="Hero Background" class="w-full h-full object-cover">
+            <!-- Professional Dark Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-slate-950/80"></div>
+        </div>
+
+        <div class="container relative z-10 text-center">
+            <div class="max-w-4xl mx-auto space-y-8 animate-fade-in-up">
+                <span
+                    class="inline-block px-4 py-1.5 bg-emerald-500/20 backdrop-blur rounded-full text-emerald-400 font-bold text-sm tracking-wider uppercase border border-emerald-500/30">Science-Backed
+                    Results</span>
+                <h1 class="font-outfit text-5xl md:text-8xl leading-none">Your Body,<br>Your <span
+                        class="text-emerald-500">Rules.</span></h1>
+                <p class="text-xl text-slate-300 max-w-2xl mx-auto">Get a high-performance meal plan optimized for your
+                    unique DNA, lifestyle, and fitness goals.</p>
+                <div class="pt-6">
+                    <a href="signup.html"
+                        class="btn btn-primary px-12 text-xl hover:scale-105 transition-transform shadow-xl shadow-emerald-500/20">Get
+                        Your Personalized Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calorie Calculator Preview -->
+    <section class="py-24 bg-white dark:bg-slate-950">
+
+        <div class="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 py-20 items-center">
+            <div class="space-y-6">
+                <h2 class="text-4xl">Find your numbers in seconds.</h2>
+                <p class="text-slate-600 dark:text-slate-400 text-lg">Our precision engine calculates your BMR, TDEE,
+                    and ideal macro ratios based on your activity level and body composition.</p>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3"><span class="text-emerald-500">✓</span> Dynamic BMR Calculation
+                    </li>
+                    <li class="flex items-center gap-3"><span class="text-emerald-500">✓</span> Macro-Ratio Optimization
+                    </li>
+                    <li class="flex items-center gap-3"><span class="text-emerald-500">✓</span> Hydration Goal Tracking
+                    </li>
+                </ul>
+                <div class="pt-4">
+                    <a href="features.html#calculator" class="btn btn-primary">Try Calorie Calculator</a>
+                </div>
+            </div>
+            <div
+                class="bg-slate-50 dark:bg-slate-900 rounded-3xl p-8 border border-slate-200 dark:border-slate-800 shadow-2xl">
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="flex-1 space-y-2">
+                            <label class="text-xs font-bold uppercase text-slate-500">Age</label>
+                            <div
+                                class="h-12 bg-white dark:bg-slate-800 rounded-lg flex items-center px-4 font-bold border border-slate-200 dark:border-slate-700">
+                                28</div>
+                        </div>
+                        <div class="flex-1 space-y-2">
+                            <label class="text-xs font-bold uppercase text-slate-500">Gender</label>
+                            <div
+                                class="h-12 bg-white dark:bg-slate-800 rounded-lg flex items-center px-4 font-bold border border-slate-200 dark:border-slate-700">
+                                Male</div>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase text-slate-500">Daily Goal</label>
+                        <div
+                            class="h-12 bg-white dark:bg-slate-800 rounded-lg flex items-center justify-between px-4 font-bold border border-emerald-500 shadow-lg shadow-emerald-500/10">
+                            <span>Lose Weight</span>
+                            <span class="text-emerald-500">2,100 kcal</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 grid grid-cols-3 gap-4 text-center">
+                        <div class="p-4 bg-emerald-500/10 rounded-xl border border-emerald-500/20">
+                            <p class="text-[10px] text-slate-500">PROTEIN</p>
+                            <p class="font-bold text-emerald-500">150g</p>
+                        </div>
+                        <div class="p-4 bg-blue-500/10 rounded-xl border border-blue-500/20">
+                            <p class="text-[10px] text-slate-500">CARBS</p>
+                            <p class="font-bold text-blue-500">200g</p>
+                        </div>
+                        <div class="p-4 bg-orange-500/10 rounded-xl border border-orange-500/20">
+                            <p class="text-[10px] text-slate-500">FATS</p>
+                            <p class="font-bold text-orange-500">65g</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step Timeline -->
+    <section class="py-24 bg-slate-50 dark:bg-slate-900/50">
+        <div class="container">
+            <h2 class="text-center mb-16">Your path to success</h2>
+            <div class="relative grid grid-cols-1 md:grid-cols-5 gap-8">
+                <!-- Line Divider -->
+                <div class="hidden md:block absolute top-12 left-0 right-0 h-1 bg-emerald-500/10 -z-10"></div>
+
+                <div class="text-center space-y-4">
+                    <div
+                        class="w-16 h-16 bg-white dark:bg-slate-900 border-4 border-emerald-500 rounded-full flex items-center justify-center mx-auto text-xl font-bold shadow-lg">
+                        1</div>
+                    <h4 class="font-bold">Set Goal</h4>
+                    <p class="text-sm text-slate-500">Voice your targets</p>
+                </div>
+                <div class="text-center space-y-4">
+                    <div
+                        class="w-16 h-16 bg-white dark:bg-slate-900 border-4 border-emerald-100 dark:border-slate-800 rounded-full flex items-center justify-center mx-auto text-xl font-bold">
+                        2</div>
+                    <h4 class="font-bold">Pick Diet</h4>
+                    <p class="text-sm text-slate-500">Vegan, Keto, more</p>
+                </div>
+                <div class="text-center space-y-4">
+                    <div
+                        class="w-16 h-16 bg-white dark:bg-slate-900 border-4 border-emerald-100 dark:border-slate-800 rounded-full flex items-center justify-center mx-auto text-xl font-bold">
+                        3</div>
+                    <h4 class="font-bold">Generate</h4>
+                    <p class="text-sm text-slate-500">Instant AI Plan</p>
+                </div>
+                <div class="text-center space-y-4">
+                    <div
+                        class="w-16 h-16 bg-white dark:bg-slate-900 border-4 border-emerald-100 dark:border-slate-800 rounded-full flex items-center justify-center mx-auto text-xl font-bold">
+                        4</div>
+                    <h4 class="font-bold">Shop</h4>
+                    <p class="text-sm text-slate-500">Grocery list ready</p>
+                </div>
+                <div class="text-center space-y-4">
+                    <div
+                        class="w-16 h-16 bg-white dark:bg-slate-900 border-4 border-emerald-100 dark:border-slate-800 rounded-full flex items-center justify-center mx-auto text-xl font-bold">
+                        5</div>
+                    <h4 class="font-bold">Cook</h4>
+                    <p class="text-sm text-slate-500">Bon Appétit!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider (Static Grid for now as requested cards grid) -->
+    <section class="py-24">
+        <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=800"
+                    alt="Cooking" class="rounded-full aspect-square object-cover shadow-2xl mx-auto max-w-[400px]">
+                <div class="space-y-8 text-center">
+                    <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                    <h2 class="text-4xl">"The best decision for my family's health."</h2>
+                    <p class="text-xl text-slate-600 dark:text-slate-400">"Prior to the app, meal planning felt like a
+                        chore. Now it's something we look forward to every Sunday night."</p>
+                    <div class="flex items-center justify-center gap-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZVClTiScYVHRzyd9eJcJWEin27m4JY0TsHw&s"
+                            alt="Amanda Rodriguez"
+                            class="w-14 h-14 rounded-full object-cover bg-slate-200 dark:bg-slate-800">
+                        <div class="text-left">
+                            <p class="font-bold">Amanda Rodriguez</p>
+                            <p class="text-sm text-slate-500">Mother of three, Pro Member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-24 bg-emerald-600 text-white">
+        <div class="container max-w-4xl text-center space-y-8">
+            <h2 class="text-4xl">Weekly nutrition tips in your inbox</h2>
+            <p class="text-emerald-100 text-lg">Join 100,000+ subscribers for healthy recipes, fitness tips, and
+                exclusive offers.</p>
+            <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="Enter your email"
+                    class="flex-1 h-12 px-6 rounded-lg text-slate-900 outline-none focus:ring-4 focus:ring-white/20">
+                <button type="submit" class="btn bg-slate-900 hover:bg-black text-white px-8">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="layout.js"></script>
+</body>
+
+</html>

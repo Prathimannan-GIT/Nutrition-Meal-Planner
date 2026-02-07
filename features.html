@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features | Nutri Planner</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { emerald: { 500: '#10b981', 600: '#059669' } }, fontFamily: { outfit: ['Outfit', 'sans-serif'], inter: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="pt-[80px]">
+    <section class="py-20 bg-emerald-50 dark:bg-emerald-900/10">
+        <div class="container text-center max-w-3xl">
+            <h1 class="font-outfit text-4xl md:text-5xl mb-6">Built for your <span
+                    class="text-emerald-500">lifestyle.</span></h1>
+            <p class="text-lg text-slate-600 dark:text-slate-400">Everything you need to track, plan, and optimize your
+                nutrition in one powerful platform.</p>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- AI Planner -->
+                <div
+                    class="card space-y-4 text-center h-full hover:shadow-lg transition-all border-t-4 border-t-emerald-500">
+                    <div class="text-3xl">🤖</div>
+                    <h3>AI Meal Planner</h3>
+                    <p class="text-sm text-slate-500">Smart algorithms that learn your tastes and metabolic needs to
+                        generate the perfect weekly plan.</p>
+                </div>
+                <!-- Macro Tracking -->
+                <div
+                    class="card space-y-4 text-center h-full hover:shadow-lg transition-all border-t-4 border-t-blue-500">
+                    <div class="text-3xl">📊</div>
+                    <h3>Macro Tracking</h3>
+                    <p class="text-sm text-slate-500">Live breakdown of Proteins, Carbs, and Fats with precision
+                        accuracy for every single meal.</p>
+                </div>
+                <!-- Grocery List -->
+                <div
+                    class="card space-y-4 text-center h-full hover:shadow-lg transition-all border-t-4 border-t-orange-500">
+                    <div class="text-3xl">🛒</div>
+                    <h3>Grocery Generator</h3>
+                    <p class="text-sm text-slate-500">Automatically syncs your meal plan to a smart shopping list,
+                        categorized for efficiency.</p>
+                </div>
+                <!-- Dietary Filters -->
+                <div
+                    class="card space-y-4 text-center h-full hover:shadow-lg transition-all border-t-4 border-t-purple-500">
+                    <div class="text-3xl">🌿</div>
+                    <h3>Dietary Filters</h3>
+                    <p class="text-sm text-slate-500">Support for Vegan, Keto, Paleo, Gluten-Free, and custom allergy
+                        exclusions.</p>
+                </div>
+                <!-- Reminders -->
+                <div
+                    class="card space-y-4 text-center h-full hover:shadow-lg transition-all border-t-4 border-t-red-500">
+                    <div class="text-3xl">🔔</div>
+                    <h3>Meal Reminders</h3>
+                    <p class="text-sm text-slate-500">Never miss a macro goal with smart notifications for prep and
+                        eating times.</p>
+                </div>
+                <!-- Dashboard -->
+                <div
+                    class="card space-y-4 text-center h-full hover:shadow-lg transition-all border-t-4 border-t-indigo-500">
+                    <div class="text-3xl">📈</div>
+                    <h3>Progress Tracking</h3>
+                    <p class="text-sm text-slate-500">Visual charts for weight, body fat %, and nutritional consistency
+                        over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-50 dark:bg-slate-900/50 overflow-hidden">
+        <div class="container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="relative order-2 lg:order-1 animate-fade-in-up">
+                <!-- Glowing Decoration -->
+                <div class="absolute -top-20 -left-20 w-64 h-64 bg-emerald-500/10 blur-[100px] rounded-full"></div>
+
+                <div
+                    class="relative z-10 card p-0 border-none shadow-2xl overflow-hidden bg-white dark:bg-slate-950 group">
+                    <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=1740&auto=format&fit=crop"
+                        alt="AI Nutrition Science"
+                        class="w-full h-[290px] object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="p-8 space-y-4">
+                        <h3 class="text-2xl">The AI Core Science</h3>
+                        <p class="text-slate-600 dark:text-slate-400">Our proprietary engine predicts your body's
+                            response to nutrients by processing over 500,000 data points daily to refine your metabolic
+                            profile.</p>
+                        <div
+                            class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+                            <div class="text-center">
+                                <p class="text-emerald-500 font-bold">Real-time</p>
+                                <p class="text-[10px] uppercase font-bold text-slate-400">Recalculation</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-blue-500 font-bold">Predictive</p>
+                                <p class="text-[10px] uppercase font-bold text-slate-400">Modeling</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-purple-500 font-bold">Dynamic</p>
+                                <p class="text-[10px] uppercase font-bold text-slate-400">Bio-Sync</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6 order-1 lg:order-2">
+                <div
+                    class="inline-block px-3 py-1 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 rounded-full text-xs font-bold uppercase tracking-widest mb-2">
+                    Deep Learning Core</div>
+                <h2 class="text-4xl font-outfit">Precision Nutrition, <br><span
+                        class="text-emerald-500">Quantified.</span></h2>
+                <p class="text-lg text-slate-600 dark:text-slate-400">Our advanced dashboard goes beyond simple calorie
+                    counting. We give you a bird's eye view of your metabolic health, helping you understand the 'why'
+                    behind your results.</p>
+
+                <div class="grid grid-cols-2 gap-6 pt-4">
+                    <div
+                        class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-emerald-500/50 transition-colors">
+                        <p class="font-bold text-3xl text-emerald-500">98.4%</p>
+                        <p class="text-xs text-slate-500 font-bold uppercase tracking-wider">Macro Accuracy</p>
+                    </div>
+                    <div
+                        class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-emerald-500/50 transition-colors">
+                        <p class="font-bold text-3xl text-emerald-500">2M+</p>
+                        <p class="text-xs text-slate-500 font-bold uppercase tracking-wider">Personalized Recipes</p>
+                    </div>
+                </div>
+
+                <div class="pt-6">
+                    <a href="signup.html"
+                        class="btn btn-primary px-10 text-lg shadow-lg shadow-emerald-500/20">Experience the AI
+                        Advantage</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Device Integration -->
+    <section class="py-24 bg-white dark:bg-slate-950">
+        <div class="container text-center max-w-4xl space-y-12">
+            <h2 class="text-4xl font-outfit">Sync your entire <span class="text-emerald-500">ecosystem.</span></h2>
+            <p class="text-lg text-slate-600 dark:text-slate-400">Nutrition doesn't exist in a vacuum. Connect your
+                favorite wearable devices to give the AI the full context of your fitness data.</p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center gap-4 group">
+                    <div
+                        class="w-24 h-24 rounded-[2rem] bg-slate-50 dark:bg-slate-900 flex items-center justify-center shadow-xl group-hover:shadow-emerald-500/10 group-hover:scale-110 transition-all duration-300">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/apple.svg"
+                            class="w-12 h-12 opacity-80 group-hover:opacity-100 dark:invert transition-all"
+                            alt="Apple Health">
+                    </div>
+                    <span
+                        class="font-bold text-sm tracking-tight text-slate-500 group-hover:text-emerald-500 transition-colors">Apple
+                        Health</span>
+                </div>
+                <div class="flex flex-col items-center gap-4 group">
+                    <div
+                        class="w-24 h-24 rounded-[2rem] bg-slate-50 dark:bg-slate-900 flex items-center justify-center shadow-xl group-hover:shadow-emerald-500/10 group-hover:scale-110 transition-all duration-300">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googlefit.svg"
+                            class="w-12 h-12 opacity-80 group-hover:opacity-100 dark:invert transition-all"
+                            alt="Google Fit">
+                    </div>
+                    <span
+                        class="font-bold text-sm tracking-tight text-slate-500 group-hover:text-emerald-500 transition-colors">Google
+                        Fit</span>
+                </div>
+                <div class="flex flex-col items-center gap-4 group">
+                    <div
+                        class="w-24 h-24 rounded-[2rem] bg-slate-50 dark:bg-slate-900 flex items-center justify-center shadow-xl group-hover:shadow-emerald-500/10 group-hover:scale-110 transition-all duration-300">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/fitbit.svg"
+                            class="w-12 h-12 opacity-80 group-hover:opacity-100 dark:invert transition-all"
+                            alt="Fitbit">
+                    </div>
+                    <span
+                        class="font-bold text-sm tracking-tight text-slate-500 group-hover:text-emerald-500 transition-colors">Fitbit</span>
+                </div>
+                <div class="flex flex-col items-center gap-4 group">
+                    <div
+                        class="w-24 h-24 rounded-[2rem] bg-slate-50 dark:bg-slate-900 flex items-center justify-center shadow-xl group-hover:shadow-emerald-500/10 group-hover:scale-110 transition-all duration-300">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/garmin.svg"
+                            class="w-12 h-12 opacity-80 group-hover:opacity-100 dark:invert transition-all"
+                            alt="Garmin">
+                    </div>
+                    <span
+                        class="font-bold text-sm tracking-tight text-slate-500 group-hover:text-emerald-500 transition-colors">Garmin</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="layout.js"></script>
+</body>
+
+</html>

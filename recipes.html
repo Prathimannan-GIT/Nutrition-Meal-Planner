@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Recipes | Nutri Planner</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { emerald: { 500: '#10b981', 600: '#059669' } }, fontFamily: { outfit: ['Outfit', 'sans-serif'], inter: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .filter-btn {
+            @apply px-6 py-2 rounded-full border border-slate-200 dark:border-slate-800 hover:border-emerald-500 hover:text-emerald-500 transition-all font-medium;
+        }
+
+        .filter-btn.active {
+            @apply bg-emerald-500 border-emerald-500 text-white;
+        }
+    </style>
+</head>
+
+<body class="pt-[80px]">
+    <section class="py-16">
+        <div class="container text-center space-y-8">
+            <h1 class="font-outfit text-4xl md:text-5xl">Gourmet Nutrition.</h1>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Breakfast</button>
+                <button class="filter-btn">Lunch</button>
+                <button class="filter-btn">Dinner</button>
+                <button class="filter-btn">Snacks</button>
+                <button class="filter-btn">High Protein</button>
+                <button class="filter-btn">Under 15 Min</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12">
+        <div class="container">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Recipe 1 -->
+                <div class="card p-0 overflow-hidden group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=500"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        <div
+                            class="absolute top-2 right-2 bg-white/90 dark:bg-slate-900/90 px-2 py-1 rounded text-[10px] font-bold">
+                            VEGAN</div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h4 class="line-clamp-1">Quinoa Avocado Bowl</h4>
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="w-6 h-6 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-[10px]">
+                                👨‍🍳</div>
+                            <span class="text-xs text-slate-500">Chef Alex</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-[10px] font-bold text-slate-500 uppercase">
+                            <div class="bg-slate-50 dark:bg-slate-800 p-2 rounded">🔥 450 kcal</div>
+                            <div class="bg-slate-50 dark:bg-slate-800 p-2 rounded">🥩 22g Prot</div>
+                        </div>
+                        <a href="#" class="btn btn-primary w-full text-sm">Full Recipe</a>
+                    </div>
+                </div>
+
+                <!-- Recipe 2 -->
+                <div class="card p-0 overflow-hidden group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=500"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        <div
+                            class="absolute top-2 right-2 bg-white/90 dark:bg-slate-900/90 px-2 py-1 rounded text-[10px] font-bold">
+                            KETO</div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h4 class="line-clamp-1">Glazed Baked Salmon</h4>
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="w-6 h-6 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-[10px]">
+                                👨‍🍳</div>
+                            <span class="text-xs text-slate-500">Chef Julian</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-[10px] font-bold text-slate-500 uppercase">
+                            <div class="bg-slate-50 dark:bg-slate-800 p-2 rounded">🔥 620 kcal</div>
+                            <div class="bg-slate-50 dark:bg-slate-800 p-2 rounded">🥩 45g Prot</div>
+                        </div>
+                        <a href="#" class="btn btn-primary w-full text-sm">Full Recipe</a>
+                    </div>
+                </div>
+
+                <!-- Recipe 3 -->
+                <div class="card p-0 overflow-hidden group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&q=80&w=500"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        <div
+                            class="absolute top-2 right-2 bg-white/90 dark:bg-slate-900/90 px-2 py-1 rounded text-[10px] font-bold">
+                            QUICK</div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h4 class="line-clamp-1">Berry Protein Shake</h4>
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="w-6 h-6 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-[10px]">
+                                👨‍🍳</div>
+                            <span class="text-xs text-slate-500">Chef Sarah</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-[10px] font-bold text-slate-500 uppercase">
+                            <div class="bg-slate-50 dark:bg-slate-800 p-2 rounded">🔥 320 kcal</div>
+                            <div class="bg-slate-50 dark:bg-slate-800 p-2 rounded">🥩 30g Prot</div>
+                        </div>
+                        <a href="#" class="btn btn-primary w-full text-sm">Full Recipe</a>
+                    </div>
+                </div>
+
+                <!-- Recipe 4 -->
+                <div class="card p-0 overflow-hidden group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=500"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        <div
+                            class="absolute top-2 right-2 bg-white/90 dark:bg-slate-900/90 px-2 py-1 rounded text-[10px] font-bold">
+                            HEALTHY</div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h4 class="line-clamp-1">Classic Greek Salad</h4>
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="w-6 h-6 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-[10px]">
+                                👨‍🍳</div>
+                            <span class="text-xs text-slate-500">Chef Mike</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-[10px] font-bold text-slate-500 uppercase">
+                            <div class="bg-slate-50 dark:bg-slate-800 p-2 rounded">🔥 280 kcal</div>
+                            <div class="bg-slate-50 dark:bg-slate-800 p-2 rounded">🥩 12g Prot</div>
+                        </div>
+                        <a href="#" class="btn btn-primary w-full text-sm">Full Recipe</a>
+                    </div>
+                </div>
+
+                <!-- Recipe 5 -->
+                <div class="card p-0 overflow-hidden group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=500"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        <div
+                            class="absolute top-2 right-2 bg-white/90 dark:bg-slate-900/90 px-2 py-1 rounded text-[10px] font-bold text-emerald-500">
+                            PRO</div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h4 class="line-clamp-1">Grass-Fed Ribeye Steak</h4>
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="w-6 h-6 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-[10px]">
+                                👨‍🍳</div>
+                            <span class="text-xs text-slate-500">Chef Julian</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-[10px] font-bold text-slate-500 uppercase">
+                            <div class="bg-slate-50 dark:bg-slate-800 p-2 rounded">🔥 850 kcal</div>
+                            <div class="bg-slate-50 dark:bg-slate-800 p-2 rounded">🥩 65g Prot</div>
+                        </div>
+                        <a href="#" class="btn btn-primary w-full text-sm">Full Recipe</a>
+                    </div>
+                </div>
+
+                <!-- Recipe 6 -->
+                <div class="card p-0 overflow-hidden group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&q=80&w=500"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        <div
+                            class="absolute top-2 right-2 bg-white/90 dark:bg-slate-900/90 px-2 py-1 rounded text-[10px] font-bold">
+                            PALEO</div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h4 class="line-clamp-1">Green Garden Mix</h4>
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="w-6 h-6 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-[10px]">
+                                👨‍🍳</div>
+                            <span class="text-xs text-slate-500">Chef Sarah</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-[10px] font-bold text-slate-500 uppercase">
+                            <div class="bg-slate-50 dark:bg-slate-800 p-2 rounded">🔥 210 kcal</div>
+                            <div class="bg-slate-50 dark:bg-slate-800 p-2 rounded">🥩 8g Prot</div>
+                        </div>
+                        <a href="#" class="btn btn-primary w-full text-sm">Full Recipe</a>
+                    </div>
+                </div>
+
+                <!-- Recipe 7 -->
+                <div class="card p-0 overflow-hidden group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=500"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        <div
+                            class="absolute top-2 right-2 bg-white/90 dark:bg-slate-900/90 px-2 py-1 rounded text-[10px] font-bold">
+                            VEGAN</div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h4 class="line-clamp-1">Roasted Sweet Pot</h4>
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="w-6 h-6 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-[10px]">
+                                👨‍🍳</div>
+                            <span class="text-xs text-slate-500">Chef Mike</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-[10px] font-bold text-slate-500 uppercase">
+                            <div class="bg-slate-50 dark:bg-slate-800 p-2 rounded">🔥 380 kcal</div>
+                            <div class="bg-slate-50 dark:bg-slate-800 p-2 rounded">🥩 14g Prot</div>
+                        </div>
+                        <a href="#" class="btn btn-primary w-full text-sm">Full Recipe</a>
+                    </div>
+                </div>
+
+                <!-- Recipe 8 -->
+                <div class="card p-0 overflow-hidden group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&q=80&w=500"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        <div
+                            class="absolute top-2 right-2 bg-white/90 dark:bg-slate-900/90 px-2 py-1 rounded text-[10px] font-bold">
+                            DINNER</div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h4 class="line-clamp-1">Pesto Pasta Primavera</h4>
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="w-6 h-6 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-[10px]">
+                                👨‍🍳</div>
+                            <span class="text-xs text-slate-500">Chef Alex</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-[10px] font-bold text-slate-500 uppercase">
+                            <div class="bg-slate-50 dark:bg-slate-800 p-2 rounded">🔥 520 kcal</div>
+                            <div class="bg-slate-50 dark:bg-slate-800 p-2 rounded">🥩 18g Prot</div>
+                        </div>
+                        <a href="#" class="btn btn-primary w-full text-sm">Full Recipe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-50 dark:bg-slate-900/50">
+        <div class="container">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-2 space-y-8">
+                    <h2 class="text-3xl font-outfit">Seasonal Ingredient <span
+                            class="text-emerald-500">Highlights</span></h2>
+                    <p class="text-slate-600 dark:text-slate-400">Cooking with the seasons ensures maximum nutrient
+                        density and flavor. Here's what our AI is prioritizing in plans this month:</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="card bg-white dark:bg-slate-950 p-6 flex items-center gap-6">
+                            <div class="text-4xl">🎃</div>
+                            <div>
+                                <h4 class="font-bold">Winter Squash</h4>
+                                <p class="text-xs text-slate-500">High in Vitamin A and fiber. Perfect for sustained
+                                    energy during colder months.</p>
+                            </div>
+                        </div>
+                        <div class="card bg-white dark:bg-slate-950 p-6 flex items-center gap-6">
+                            <div class="text-4xl">🥬</div>
+                            <div>
+                                <h4 class="font-bold">Organic Kale</h4>
+                                <p class="text-xs text-slate-500">The king of greens. Loaded with antioxidants and
+                                    Vitamin K for bone health.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-emerald-600 text-white p-8 space-y-6 relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full"></div>
+                    <div class="relative z-10 space-y-4">
+                        <span
+                            class="px-3 py-1 bg-white/20 rounded-full text-[10px] font-bold uppercase tracking-widest">Chef's
+                            Corner</span>
+                        <h3 class="text-2xl font-outfit">The Perfect Sear</h3>
+                        <p class="text-sm text-emerald-100 italic">"When preparing our Signature Salmon, ensure your pan
+                            is shimmering hot before adding the fish. This locks in the healthy fats and creates a
+                            restaurant-quality crust."</p>
+                        <hr class="border-white/20">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-white/20"></div>
+                            <div>
+                                <p class="font-bold text-sm">Chef Julian V.</p>
+                                <p class="text-xs opacity-70">Executive Culinary Director</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white dark:bg-slate-950 text-center">
+        <div class="container max-w-2xl space-y-8">
+            <h2 class="text-3xl font-outfit">Can't find what you're looking for?</h2>
+            <p class="text-slate-500">Our Pro members can request custom recipe formulations from our culinary team
+                based on specific dietary needs.</p>
+            <div class="pt-4">
+                <a href="pricing.html" class="btn btn-primary px-12">Upgrade for Custom Recipes</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="layout.js"></script>
+</body>
+
+</html>

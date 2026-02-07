@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Nutri Planner</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { emerald: { 500: '#10b981', 600: '#059669' } }, fontFamily: { outfit: ['Outfit', 'sans-serif'], inter: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="pt-[80px]">
+    <section class="py-20">
+        <div class="container text-center max-w-3xl space-y-6">
+            <h1 class="font-outfit text-4xl md:text-6xl">Simple, <span class="text-emerald-500">Transparent</span>
+                Pricing.</h1>
+            <p class="text-lg text-slate-600 dark:text-slate-400">Choose the plan that fits your journey. No hidden
+                fees, cancel anytime.</p>
+        </div>
+    </section>
+
+    <section class="py-12">
+        <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Free Plan -->
+                <div class="card flex flex-col h-full border-t-8 border-t-slate-300 dark:border-t-slate-700">
+                    <div class="mb-8">
+                        <h3 class="text-xl mb-2">Free Plan</h3>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-4xl font-bold">$0</span>
+                            <span class="text-slate-500">/mo</span>
+                        </div>
+                        <p class="mt-4 text-sm text-slate-500 italic text-center min-h-[40px]">Perfect for beginners
+                            starting their journey.</p>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-1">
+                        <li class="flex gap-3 text-sm"><span class="text-emerald-500">✓</span> Basic Meal Generator</li>
+                        <li class="flex gap-3 text-sm"><span class="text-emerald-500">✓</span> Calorie Tracking</li>
+                        <li class="flex gap-3 text-sm"><span class="text-emerald-500">✓</span> 100+ Free Recipes</li>
+                        <li class="flex gap-3 text-sm text-slate-400">✕ AI Personalization</li>
+                        <li class="flex gap-3 text-sm text-slate-400">✕ Smart Grocery List</li>
+                    </ul>
+                    <a href="signup.html"
+                        class="btn border-2 border-slate-200 dark:border-slate-800 w-full text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Join
+                        for
+                        Free</a>
+                </div>
+
+                <!-- Monthly Pro -->
+                <div class="card flex flex-col h-full ring-4 ring-emerald-500 relative border-t-8 border-t-emerald-500">
+                    <span
+                        class="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Popular</span>
+                    <div class="mb-8">
+                        <h3 class="text-xl mb-2">Monthly Pro</h3>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-4xl font-bold">$12</span>
+                            <span class="text-slate-500">/mo</span>
+                        </div>
+                        <p class="mt-4 text-sm text-slate-500 italic text-center min-h-[40px]">Advanced features for
+                            serious results.</p>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-1">
+                        <li class="flex gap-3 text-sm"><span class="text-emerald-500">✓</span> Everything in Free</li>
+                        <li class="flex gap-3 text-sm"><span class="text-emerald-500">✓</span> AI Personalization</li>
+                        <li class="flex gap-3 text-sm"><span class="text-emerald-500">✓</span> Smart Grocery List</li>
+                        <li class="flex gap-3 text-sm"><span class="text-emerald-500">✓</span> Macro Optimization</li>
+                        <li class="flex gap-3 text-sm"><span class="text-emerald-500">✓</span> Offline Access</li>
+                    </ul>
+                    <a href="signup.html" class="btn btn-primary w-full shadow-lg shadow-emerald-500/30">Join
+                        Pro</a>
+                </div>
+
+                <!-- Annual Pro -->
+                <div class="card flex flex-col h-full border-t-8 border-t-blue-500">
+                    <div class="mb-8">
+                        <h3 class="text-xl mb-2">Annual Pro</h3>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-4xl font-bold">$99</span>
+                            <span class="text-slate-500">/yr</span>
+                        </div>
+                        <p class="mt-4 text-sm text-slate-500 italic text-center min-h-[40px]">Best value for long-term
+                            commitment. Save 30%!</p>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-1">
+                        <li class="flex gap-3 text-sm"><span class="text-emerald-500">✓</span> Everything in Monthly
+                        </li>
+                        <li class="flex gap-3 text-sm"><span class="text-emerald-500">✓</span> Early Access Features
+                        </li>
+                        <li class="flex gap-3 text-sm"><span class="text-emerald-500">✓</span> Priority Support</li>
+                        <li class="flex gap-3 text-sm"><span class="text-emerald-500">✓</span> 1-on-1 Nutritionist Chat
+                        </li>
+                    </ul>
+                    <a href="signup.html"
+                        class="btn border-2 border-slate-200 dark:border-slate-800 w-full text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Save
+                        with Annual</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="py-24 bg-slate-50 dark:bg-slate-900/50">
+        <div class="container max-w-5xl overflow-x-auto">
+            <h2 class="text-center mb-16">Compare every detail</h2>
+            <table class="w-full text-left min-w-[600px]">
+                <thead>
+                    <tr class="border-b-2 border-slate-200 dark:border-slate-800">
+                        <th class="py-4 font-bold">Feature</th>
+                        <th class="py-4 font-bold">Free</th>
+                        <th class="py-4 font-bold">Pro</th>
+                        <th class="py-4 font-bold">Family</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+                    <tr>
+                        <td class="py-4 text-sm">Meal Database</td>
+                        <td class="py-4 text-emerald-500">100+</td>
+                        <td class="py-4 text-emerald-500">Unlimited</td>
+                        <td class="py-4 text-emerald-500">Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td class="py-4 text-sm">AI Recommendation</td>
+                        <td class="py-4">✕</td>
+                        <td class="py-4 text-emerald-500">✓</td>
+                        <td class="py-4 text-emerald-500">✓</td>
+                    </tr>
+                    <tr>
+                        <td class="py-4 text-sm">Macro Tracking</td>
+                        <td class="py-4 text-emerald-500">✓</td>
+                        <td class="py-4 text-emerald-500">✓</td>
+                        <td class="py-4 text-emerald-500">✓</td>
+                    </tr>
+                    <tr>
+                        <td class="py-4 text-sm">Grocery Export</td>
+                        <td class="py-4">✕</td>
+                        <td class="py-4 text-emerald-500">✓</td>
+                        <td class="py-4 text-emerald-500">✓</td>
+                    </tr>
+                    <tr>
+                        <td class="py-4 text-sm">Family Profiles</td>
+                        <td class="py-4">1</td>
+                        <td class="py-4">1</td>
+                        <td class="py-4 text-emerald-500">Up to 6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-50 dark:bg-slate-900/50">
+        <div class="container text-center max-w-4xl space-y-16">
+            <div class="space-y-4">
+                <h2 class="text-4xl font-outfit">The Value of <span class="text-emerald-500">Vibrancy.</span></h2>
+                <p class="text-lg text-slate-500">Compare the monthly cost of a Pro subscription to common daily
+                    expenses.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="space-y-4">
+                    <div class="text-4xl">☕</div>
+                    <p class="font-bold text-xl">$150/mo</p>
+                    <p class="text-sm text-slate-500">Daily specialty coffee habit</p>
+                </div>
+                <div
+                    class="space-y-4 p-8 bg-emerald-500/10 rounded-3xl border border-emerald-500/20 ring-4 ring-emerald-500/5">
+                    <div class="text-4xl">🥗</div>
+                    <p class="font-bold text-xl text-emerald-600">$19/mo</p>
+                    <p class="text-sm text-slate-500 font-bold uppercase tracking-wider">Nutri Planner Pro</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="text-4xl">🍕</div>
+                    <p class="font-bold text-xl">$120/mo</p>
+                    <p class="text-sm text-slate-500">Weekly takeout orders</p>
+                </div>
+            </div>
+
+            <p class="text-slate-400 italic">"Investing in your nutrition today saves thousands in healthcare costs
+                tomorrow."</p>
+        </div>
+    </section>
+
+    <!-- Enterprise Section -->
+    <section class="py-24 bg-white dark:bg-slate-950">
+        <div class="container">
+            <div
+                class="card bg-slate-900 text-white p-12 lg:p-20 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
+                <div class="space-y-6 relative z-10 lg:max-w-xl text-center lg:text-left">
+                    <h2 class="text-4xl text-white font-outfit">Healthier Teams <br>Perform <span
+                            class="text-emerald-500">Better.</span></h2>
+                    <p class="text-slate-400 text-lg">Looking to boost productivity and employee wellness? Our Corporate
+                        Enterprise plans offer custom dashboards and dedicated nutritionists for your entire staff.</p>
+                    <ul class="space-y-3 inline-block text-left">
+                        <li class="flex items-center gap-3 text-sm"><span class="text-emerald-500">✔</span> Bulk license
+                            discounts</li>
+                        <li class="flex items-center gap-3 text-sm"><span class="text-emerald-500">✔</span> Monthly
+                            wellness reports</li>
+                        <li class="flex items-center gap-3 text-sm"><span class="text-emerald-500">✔</span> Private
+                            Slack/Teams integration</li>
+                    </ul>
+                </div>
+                <div class="relative z-10">
+                    <a href="support.html"
+                        class="btn bg-white text-slate-900 px-12 py-4 text-lg hover:bg-slate-100 transition-colors">Contact
+                        Enterprise Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="layout.js"></script>
+</body>
+
+</html>

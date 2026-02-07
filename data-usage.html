@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Usage Policy | Nutri Planner</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { emerald: { 500: '#10b981', 600: '#059669' } }, fontFamily: { outfit: ['Outfit', 'sans-serif'], inter: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="pt-[80px]">
+    <section class="py-20 max-w-4xl mx-auto px-4">
+        <div class="space-y-12">
+            <div class="text-center space-y-4">
+                <h1 class="font-outfit text-4xl md:text-5xl">Data Usage <span
+                        class="text-emerald-500">Transparency</span></h1>
+                <p class="text-slate-500">Understand how your health data fuels your progress.</p>
+            </div>
+
+            <div class="space-y-8 text-slate-600 dark:text-slate-400 leading-relaxed">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card bg-slate-50 dark:bg-slate-900 border-none">
+                        <h3 class="mb-2">What we store</h3>
+                        <ul class="text-sm space-y-2 list-disc pl-5">
+                            <li>BMI & Body Composition</li>
+                            <li>Caloric Intake Logs</li>
+                            <li>Recipe Preferences</li>
+                            <li>Allergy Information</li>
+                        </ul>
+                    </div>
+                    <div class="card bg-slate-50 dark:bg-slate-900 border-none">
+                        <h3 class="mb-2">How it's protected</h3>
+                        <ul class="text-sm space-y-2 list-disc pl-5">
+                            <li>AES-256 Encryption</li>
+                            <li>SOC2 Compliance</li>
+                            <li>Anonymized AI Training</li>
+                            <li>Local-first Data Caching</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <section class="space-y-4">
+                    <h2 class="text-2xl text-slate-900 dark:text-white font-bold">Your data, your control.</h2>
+                    <p>We believe your nutritional data belongs to you. You can request a full export of your history in
+                        JSON or CSV format at any time. If you choose to delete your account, all personal health
+                        records are permanently purged from our production databases within 24 hours.</p>
+                    <div class="pt-6">
+                        <a href="dashboard.html" class="btn border-2 border-emerald-500 text-emerald-500">Manage My
+                            Data</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    <script src="layout.js"></script>
+</body>
+
+</html>

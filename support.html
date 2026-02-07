@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Nutri Planner</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { emerald: { 500: '#10b981', 600: '#059669' } }, fontFamily: { outfit: ['Outfit', 'sans-serif'], inter: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="pt-[80px]">
+    <section class="py-20 bg-slate-50 dark:bg-slate-900/50">
+        <div class="container text-center max-w-3xl space-y-6">
+            <h1 class="font-outfit text-4xl md:text-5xl">How can we <span class="text-emerald-500">help?</span></h1>
+            <div class="relative max-w-xl mx-auto">
+                <input type="text" placeholder="Search for answers..."
+                    class="w-full h-14 pl-14 pr-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 outline-none focus:ring-4 focus:ring-emerald-500/10 transition-all">
+                <span class="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
+            </div>
+            <p class="text-slate-500">Popular topics: Calorie Tracking, Subscription, App Sync</p>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="container grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div class="space-y-8">
+                <h2 class="text-3xl">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <div class="card bg-slate-50 dark:bg-slate-900 border-none">
+                        <details class="group">
+                            <summary class="flex items-center justify-between cursor-pointer font-bold list-none">
+                                <span>How do I cancel my Pro subscription?</span>
+                                <span class="group-open:rotate-180 transition-transform">▼</span>
+                            </summary>
+                            <p class="mt-4 text-slate-600 dark:text-slate-400 text-sm">You can cancel your subscription
+                                anytime through your Profile settings. Your Pro benefits will remain active until the
+                                end of your billing cycle.</p>
+                        </details>
+                    </div>
+                    <div class="card bg-slate-50 dark:bg-slate-900 border-none">
+                        <details class="group">
+                            <summary class="flex items-center justify-between cursor-pointer font-bold list-none">
+                                <span>Can I share my plan with family members?</span>
+                                <span class="group-open:rotate-180 transition-transform">▼</span>
+                            </summary>
+                            <p class="mt-4 text-slate-600 dark:text-slate-400 text-sm">Yes! With our Family Plan, you
+                                can add up to 6 members who will all get their own personalized dashboards.</p>
+                        </details>
+                    </div>
+                    <div class="card bg-slate-50 dark:bg-slate-900 border-none">
+                        <details class="group">
+                            <summary class="flex items-center justify-between cursor-pointer font-bold list-none">
+                                <span>Does the app sync with Apple Health?</span>
+                                <span class="group-open:rotate-180 transition-transform">▼</span>
+                            </summary>
+                            <p class="mt-4 text-slate-600 dark:text-slate-400 text-sm">Absolutely. We sync macros and
+                                hydration data seamlessly with Apple Health, Google Fit, and MyFitnessPal.</p>
+                        </details>
+                    </div>
+                    <div class="card bg-slate-50 dark:bg-slate-900 border-none">
+                        <details class="group">
+                            <summary class="flex items-center justify-between cursor-pointer font-bold list-none">
+                                <span>Can I request custom recipes for specific allergies?</span>
+                                <span class="group-open:rotate-180 transition-transform">▼</span>
+                            </summary>
+                            <p class="mt-4 text-slate-600 dark:text-slate-400 text-sm">Yes, Pro members can use our
+                                "Chef's Request" feature to get custom-formulated recipes based on unique allergy
+                                profiles or rare dietary requirements.</p>
+                        </details>
+                    </div>
+                    <div class="card bg-slate-50 dark:bg-slate-900 border-none">
+                        <details class="group">
+                            <summary class="flex items-center justify-between cursor-pointer font-bold list-none">
+                                <span>What happens to my data if I delete my account?</span>
+                                <span class="group-open:rotate-180 transition-transform">▼</span>
+                            </summary>
+                            <p class="mt-4 text-slate-600 dark:text-slate-400 text-sm">We take privacy seriously. Upon
+                                account deletion, all your personal data, meal logs, and metabolic profiles are
+                                permanently removed from our servers within 30 days.</p>
+                        </details>
+                    </div>
+                    <div class="card bg-slate-50 dark:bg-slate-900 border-none">
+                        <details class="group">
+                            <summary class="flex items-center justify-between cursor-pointer font-bold list-none">
+                                <span>Is there an offline mode for the grocery list?</span>
+                                <span class="group-open:rotate-180 transition-transform">▼</span>
+                            </summary>
+                            <p class="mt-4 text-slate-600 dark:text-slate-400 text-sm">Yes! Your active grocery list is
+                                cached locally on your device, so you can check off items even in stores with poor
+                                cellular reception.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-8">
+                <h2 class="text-3xl">Send us a message</h2>
+                <div class="card space-y-6">
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase text-slate-500">First Name</label>
+                                <input type="text"
+                                    class="w-full h-12 px-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-emerald-500 transition-all">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase text-slate-500">Email</label>
+                                <input type="email"
+                                    class="w-full h-12 px-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-emerald-500 transition-all">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase text-slate-500">Subject</label>
+                            <select
+                                class="w-full h-12 px-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-emerald-500 transition-all">
+                                <option>Technical Issue</option>
+                                <option>Billing Question</option>
+                                <option>Feature Request</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase text-slate-500">Message</label>
+                            <textarea rows="5"
+                                class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-emerald-500 transition-all"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-auto px-10">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Knowledge Base Categories -->
+    <section class="py-24 bg-white dark:bg-slate-950">
+        <div class="container space-y-12">
+            <h2 class="text-3xl font-outfit text-center">Browse by <span class="text-emerald-500">category</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card p-8 group cursor-pointer hover:border-emerald-500 transition-colors">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">👤</div>
+                    <h4 class="font-bold mb-2">My Account</h4>
+                    <p class="text-sm text-slate-500">Manage subscriptions, profile settings, and data exports.</p>
+                </div>
+                <div class="card p-8 group cursor-pointer hover:border-emerald-500 transition-colors">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🥗</div>
+                    <h4 class="font-bold mb-2">Meal Planning</h4>
+                    <p class="text-sm text-slate-500">How to use AI swaps, grocery lists, and macro tracking.</p>
+                </div>
+                <div class="card p-8 group cursor-pointer hover:border-emerald-500 transition-colors">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">📱</div>
+                    <h4 class="font-bold mb-2">Device Sync</h4>
+                    <p class="text-sm text-slate-500">Troubleshooting Wearables, Apple Health, and Google Fit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Chat Preview -->
+    <section class="py-24 bg-slate-900 text-white overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-emerald-500/10 skew-x-12"></div>
+        <div class="container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6 relative z-10">
+                <h2 class="text-4xl text-white font-outfit">Need a <span class="text-emerald-500">Human?</span></h2>
+                <p class="text-slate-400 text-lg">Pro members get priority 24/7 access to our live support team and
+                    nutrition specialists.</p>
+                <div class="flex items-center gap-4">
+                    <div class="flex -space-x-4">
+                        <div class="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-800"></div>
+                        <div class="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-700"></div>
+                        <div class="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-600"></div>
+                    </div>
+                    <p class="text-xs text-slate-500 font-bold uppercase tracking-widest">Support team online now</p>
+                </div>
+                <div class="pt-4">
+                    <button class="btn btn-primary px-10">Start Live Chat (Pro Only)</button>
+                </div>
+            </div>
+
+            <div class="card bg-white/5 border-white/10 p-8 backdrop-blur-xl space-y-6 relative z-10">
+                <div class="flex items-center gap-4">
+                    <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                    <p class="text-xs font-bold text-slate-400">System Status: Operational</p>
+                </div>
+                <hr class="border-white/10">
+                <div class="space-y-4">
+                    <p class="text-sm text-slate-300">Average response time: <span class="text-white font-bold">2
+                            mins</span></p>
+                    <p class="text-sm text-slate-300">Satisfied users: <span class="text-white font-bold">99.9%</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="layout.js"></script>
+</body>
+
+</html>
