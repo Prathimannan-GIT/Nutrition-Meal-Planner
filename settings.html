@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | Nutri Planner</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: { 500: '#10b981', 600: '#059669' }
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="pt-[80px] bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100">
+
+    <!-- Sidebar -->
+    <aside id="sidebar"
+        class="fixed inset-y-0 left-0 w-72 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 z-50 -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
+        <div class="h-full flex flex-col p-8">
+            <a href="index.html" class="flex items-center gap-3 mb-12">
+                <img src="assets/logo.png" alt="Logo" class="w-10 h-10">
+                <span class="text-2xl font-bold text-emerald-600 font-outfit">Nutri Planner</span>
+            </a>
+
+            <nav class="flex-1 space-y-2">
+                <a href="dashboard.html"
+                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
+                    <span class="text-xl">🏠</span> Dashboard
+                </a>
+                <a href="meal-plan.html"
+                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
+                    <span class="text-xl">📅</span> Meal Calendar
+                </a>
+                <a href="stats.html"
+                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
+                    <span class="text-xl">📊</span> Progress Stats
+                </a>
+                <a href="recipes.html"
+                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
+                    <span class="text-xl">🥗</span> Recipes Hub
+                </a>
+                <a href="grocery.html"
+                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
+                    <span class="text-xl">🛒</span> Grocery List
+                </a>
+                <a href="settings.html"
+                    class="flex items-center gap-4 px-5 py-4 rounded-2xl bg-emerald-500 text-white shadow-lg shadow-emerald-500/20 font-bold transition-all">
+                    <span class="text-xl">⚙️</span> Settings
+                </a>
+            </nav>
+
+            <div class="mt-auto pt-8 border-t border-slate-200 dark:border-slate-800">
+                <a href="login.html"
+                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 transition-all font-bold">
+                    <span class="text-xl">🚪</span> Logout
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Mobile Sidebar Backdrop -->
+    <div id="sidebar-backdrop"
+        class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 opacity-0 pointer-events-none lg:hidden transition-opacity duration-300">
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="lg:pl-72 min-h-screen p-4 sm:p-6 lg:p-10">
+        <!-- Top Navigation -->
+        <header class="flex items-center justify-between mb-10">
+            <div class="flex items-center gap-6">
+                <button id="sidebar-toggle"
+                    class="lg:hidden p-3 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 text-2xl">☰</button>
+                <div>
+                    <h1 class="text-3xl font-bold font-outfit">Settings</h1>
+                    <p class="text-slate-500">Manage your account and preferences.</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button
+                    class="w-12 h-12 flex items-center justify-center rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm text-xl relative">
+                    🔔
+                    <span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span>
+                </button>
+                <div
+                    class="flex items-center gap-4 p-2 pl-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                    <div class="text-right hidden sm:block">
+                        <p class="text-sm font-bold">Alex Johnson</p>
+                        <p class="text-[10px] text-slate-500 uppercase font-black">Pro Member</p>
+                    </div>
+                    <div
+                        class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-lg">
+                        AJ</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Settings Navigation -->
+            <div class="lg:col-span-1">
+                <div class="card p-6">
+                    <nav class="space-y-2">
+                        <button class="w-full text-left px-4 py-3 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 font-bold border-l-4 border-emerald-500">
+                            Profile
+                        </button>
+                        <button class="w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                            Nutrition Goals
+                        </button>
+                        <button class="w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                            Notifications
+                        </button>
+                        <button class="w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                            Privacy & Security
+                        </button>
+                        <button class="w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                            Subscription
+                        </button>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Settings Content -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Profile Settings -->
+                <div class="card p-8">
+                    <h2 class="text-xl font-bold font-outfit mb-6">Profile Information</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-6">
+                            <div class="w-20 h-20 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-2xl">
+                                AJ
+                            </div>
+                            <div>
+                                <button class="px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 font-bold text-sm">
+                                    Change Photo
+                                </button>
+                                <p class="text-xs text-slate-500 mt-1">JPG, PNG or GIF. Max 2MB.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold mb-2">First Name</label>
+                                <input type="text" value="Alex" 
+                                    class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2">Last Name</label>
+                                <input type="text" value="Johnson" 
+                                    class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Email</label>
+                            <input type="email" value="alex.johnson@email.com" 
+                                class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Phone</label>
+                            <input type="tel" value="+1 (555) 123-4567" 
+                                class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold mb-2">Age</label>
+                                <input type="number" value="32" 
+                                    class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2">Gender</label>
+                                <select class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                    <option>Prefer not to say</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Physical Information -->
+                <div class="card p-8">
+                    <h2 class="text-xl font-bold font-outfit mb-6">Physical Information</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Height (cm)</label>
+                            <input type="number" value="175" 
+                                class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Weight (kg)</label>
+                            <input type="number" value="76.8" 
+                                class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Goal Weight (kg)</label>
+                            <input type="number" value="72" 
+                                class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Activity Level</label>
+                            <select class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                                <option>Sedentary</option>
+                                <option selected>Lightly Active</option>
+                                <option>Moderately Active</option>
+                                <option>Very Active</option>
+                                <option>Extra Active</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preferences -->
+                <div class="card p-8">
+                    <h2 class="text-xl font-bold font-outfit mb-6">Preferences</h2>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="font-bold">Dark Mode</p>
+                                <p class="text-sm text-slate-500">Use dark theme across the app</p>
+                            </div>
+                            <button class="relative inline-flex h-6 w-11 items-center rounded-full bg-slate-200 dark:bg-emerald-500">
+                                <span class="inline-block h-4 w-4 transform rounded-full bg-white transition translate-x-1 dark:translate-x-6"></span>
+                            </button>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="font-bold">Email Notifications</p>
+                                <p class="text-sm text-slate-500">Receive meal reminders and updates</p>
+                            </div>
+                            <button class="relative inline-flex h-6 w-11 items-center rounded-full bg-emerald-500">
+                                <span class="inline-block h-4 w-4 transform rounded-full bg-white transition translate-x-6"></span>
+                            </button>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="font-bold">Push Notifications</p>
+                                <p class="text-sm text-slate-500">Get instant notifications on your device</p>
+                            </div>
+                            <button class="relative inline-flex h-6 w-11 items-center rounded-full bg-emerald-500">
+                                <span class="inline-block h-4 w-4 transform rounded-full bg-white transition translate-x-6"></span>
+                            </button>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="font-bold">Weekly Reports</p>
+                                <p class="text-sm text-slate-500">Receive weekly progress summaries</p>
+                            </div>
+                            <button class="relative inline-flex h-6 w-11 items-center rounded-full bg-emerald-500">
+                                <span class="inline-block h-4 w-4 transform rounded-full bg-white transition translate-x-6"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Save Button -->
+                <div class="flex justify-end gap-4">
+                    <button class="px-6 py-2 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 font-bold">
+                        Cancel
+                    </button>
+                    <button class="px-6 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 font-bold">
+                        Save Changes
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Sidebar Toggle for Mobile
+        const sidebar = document.getElementById('sidebar');
+        const toggle = document.getElementById('sidebar-toggle');
+        const backdrop = document.getElementById('sidebar-backdrop');
+
+        toggle.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+            backdrop.classList.toggle('opacity-0');
+            backdrop.classList.toggle('pointer-events-none');
+        });
+
+        // Close sidebar when clicking backdrop
+        backdrop.addEventListener('click', () => {
+            sidebar.classList.add('-translate-x-full');
+            backdrop.classList.add('opacity-0');
+            backdrop.classList.add('pointer-events-none');
+        });
+
+        // Close sidebar when clicking main content on mobile
+        document.querySelector('main').addEventListener('click', () => {
+            if (window.innerWidth < 1024) {
+                sidebar.classList.add('-translate-x-full');
+                backdrop.classList.add('opacity-0');
+                backdrop.classList.add('pointer-events-none');
+            }
+        });
+
+        // Toggle switches
+        document.querySelectorAll('button[class*="inline-flex h-6 w-11"]').forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const span = this.querySelector('span');
+                if (this.classList.contains('bg-emerald-500')) {
+                    this.classList.remove('bg-emerald-500');
+                    this.classList.add('bg-slate-200');
+                    span.classList.remove('translate-x-6');
+                    span.classList.add('translate-x-1');
+                } else {
+                    this.classList.remove('bg-slate-200');
+                    this.classList.add('bg-emerald-500');
+                    span.classList.remove('translate-x-1');
+                    span.classList.add('translate-x-6');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

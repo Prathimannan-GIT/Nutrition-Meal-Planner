@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Stats | Nutri Planner</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: { 500: '#10b981', 600: '#059669' }
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="pt-[80px] bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100">
+
+    <!-- Sidebar -->
+    <aside id="sidebar"
+        class="fixed inset-y-0 left-0 w-72 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 z-50 -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
+        <div class="h-full flex flex-col p-8">
+            <a href="index.html" class="flex items-center gap-3 mb-12">
+                <img src="assets/logo.png" alt="Logo" class="w-10 h-10">
+                <span class="text-2xl font-bold text-emerald-600 font-outfit">Nutri Planner</span>
+            </a>
+
+            <nav class="flex-1 space-y-2">
+                <a href="dashboard.html"
+                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
+                    <span class="text-xl">🏠</span> Dashboard
+                </a>
+                <a href="meal-plan.html"
+                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
+                    <span class="text-xl">📅</span> Meal Calendar
+                </a>
+                <a href="stats.html"
+                    class="flex items-center gap-4 px-5 py-4 rounded-2xl bg-emerald-500 text-white shadow-lg shadow-emerald-500/20 font-bold transition-all">
+                    <span class="text-xl">📊</span> Progress Stats
+                </a>
+                <a href="recipes.html"
+                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
+                    <span class="text-xl">🥗</span> Recipes Hub
+                </a>
+                <a href="grocery.html"
+                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
+                    <span class="text-xl">🛒</span> Grocery List
+                </a>
+                <a href="settings.html"
+                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
+                    <span class="text-xl">⚙️</span> Settings
+                </a>
+            </nav>
+
+            <div class="mt-auto pt-8 border-t border-slate-200 dark:border-slate-800">
+                <a href="login.html"
+                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 transition-all font-bold">
+                    <span class="text-xl">🚪</span> Logout
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Mobile Sidebar Backdrop -->
+    <div id="sidebar-backdrop"
+        class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 opacity-0 pointer-events-none lg:hidden transition-opacity duration-300">
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="lg:pl-72 min-h-screen p-4 sm:p-6 lg:p-10">
+        <!-- Top Navigation -->
+        <header class="flex items-center justify-between mb-10">
+            <div class="flex items-center gap-6">
+                <button id="sidebar-toggle"
+                    class="lg:hidden p-3 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 text-2xl">☰</button>
+                <div>
+                    <h1 class="text-3xl font-bold font-outfit">Progress Stats</h1>
+                    <p class="text-slate-500">Track your nutrition and fitness journey.</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button
+                    class="w-12 h-12 flex items-center justify-center rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm text-xl relative">
+                    🔔
+                    <span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span>
+                </button>
+                <div
+                    class="flex items-center gap-4 p-2 pl-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                    <div class="text-right hidden sm:block">
+                        <p class="text-sm font-bold">Alex Johnson</p>
+                        <p class="text-[10px] text-slate-500 uppercase font-black">Pro Member</p>
+                    </div>
+                    <div
+                        class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-lg">
+                        AJ</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Time Period Selector -->
+        <div class="card p-6 mb-8">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <h2 class="text-xl font-bold font-outfit">Progress Overview</h2>
+                <div class="flex gap-2">
+                    <button class="px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-700">Week</button>
+                    <button class="px-4 py-2 rounded-lg bg-emerald-500 text-white text-sm font-bold">Month</button>
+                    <button class="px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-700">Year</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Metrics -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="card border-emerald-500/20 bg-emerald-500/5">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-emerald-600 font-bold text-xs uppercase tracking-widest">Avg Calories</span>
+                    <span class="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center">🔥</span>
+                </div>
+                <div class="flex items-baseline gap-2">
+                    <span class="text-3xl font-bold">2,150</span>
+                    <span class="text-slate-500 text-sm">kcal/day</span>
+                </div>
+                <p class="text-xs text-emerald-600 mt-2">↑ 5% from last month</p>
+            </div>
+
+            <div class="card border-blue-500/20 bg-blue-500/5">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">Weight Loss</span>
+                    <span class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center">⚖️</span>
+                </div>
+                <div class="flex items-baseline gap-2">
+                    <span class="text-3xl font-bold">3.2</span>
+                    <span class="text-slate-500 text-sm">kg</span>
+                </div>
+                <p class="text-xs text-blue-600 mt-2">On track for goal</p>
+            </div>
+
+            <div class="card border-orange-500/20 bg-orange-500/5">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-orange-600 font-bold text-xs uppercase tracking-widest">Workout Days</span>
+                    <span class="w-8 h-8 rounded-lg bg-orange-100 flex items-center justify-center">💪</span>
+                </div>
+                <div class="flex items-baseline gap-2">
+                    <span class="text-3xl font-bold">18</span>
+                    <span class="text-slate-500 text-sm">days</span>
+                </div>
+                <p class="text-xs text-orange-600 mt-2">90% consistency</p>
+            </div>
+
+            <div class="card border-purple-500/20 bg-purple-500/5">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Goal Progress</span>
+                    <span class="w-8 h-8 rounded-lg bg-purple-100 flex items-center justify-center">🎯</span>
+                </div>
+                <div class="flex items-baseline gap-2">
+                    <span class="text-3xl font-bold">68</span>
+                    <span class="text-slate-500 text-sm">%</span>
+                </div>
+                <p class="text-xs text-purple-600 mt-2">2 months to goal</p>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <!-- Weight Progress Chart -->
+            <div class="card p-6">
+                <h3 class="text-lg font-bold font-outfit mb-6">Weight Progress</h3>
+                <div class="h-64 border-b border-l border-slate-200 dark:border-slate-800 relative flex items-end justify-between p-4 gap-2">
+                    <div class="flex-1 bg-emerald-500/20 rounded-t-lg group cursor-pointer hover:bg-emerald-500 transition-all relative" style="height: 85%">
+                        <span class="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">78.5</span>
+                    </div>
+                    <div class="flex-1 bg-emerald-500/20 rounded-t-lg group cursor-pointer hover:bg-emerald-500 transition-all relative" style="height: 82%">
+                        <span class="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">78.2</span>
+                    </div>
+                    <div class="flex-1 bg-emerald-500/20 rounded-t-lg group cursor-pointer hover:bg-emerald-500 transition-all relative" style="height: 80%">
+                        <span class="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">77.8</span>
+                    </div>
+                    <div class="flex-1 bg-emerald-500/20 rounded-t-lg group cursor-pointer hover:bg-emerald-500 transition-all relative" style="height: 78%">
+                        <span class="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">77.3</span>
+                    </div>
+                    <div class="flex-1 bg-emerald-500 rounded-t-lg group cursor-pointer relative" style="height: 75%">
+                        <span class="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-100">76.8</span>
+                    </div>
+                </div>
+                <div class="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-widest px-4 mt-2">
+                    <span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span><span>Current</span>
+                </div>
+            </div>
+
+            <!-- Nutrition Breakdown -->
+            <div class="card p-6">
+                <h3 class="text-lg font-bold font-outfit mb-6">Nutrition Breakdown</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between items-end mb-2">
+                            <span class="text-sm font-bold">Protein</span>
+                            <span class="text-xs text-slate-500">145g / 150g</span>
+                        </div>
+                        <div class="h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-emerald-500 rounded-full" style="width: 97%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-end mb-2">
+                            <span class="text-sm font-bold">Carbohydrates</span>
+                            <span class="text-xs text-slate-500">220g / 250g</span>
+                        </div>
+                        <div class="h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-blue-500 rounded-full" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-end mb-2">
+                            <span class="text-sm font-bold">Fats</span>
+                            <span class="text-xs text-slate-500">65g / 70g</span>
+                        </div>
+                        <div class="h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-orange-500 rounded-full" style="width: 93%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-end mb-2">
+                            <span class="text-sm font-bold">Fiber</span>
+                            <span class="text-xs text-slate-500">28g / 30g</span>
+                        </div>
+                        <div class="h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-purple-500 rounded-full" style="width: 93%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="card p-6">
+            <h3 class="text-lg font-bold font-outfit mb-6">Recent Achievements</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="text-center p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg">
+                    <div class="text-3xl mb-2">🏆</div>
+                    <p class="text-xs font-bold">7-Day Streak</p>
+                </div>
+                <div class="text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                    <div class="text-3xl mb-2">💧</div>
+                    <p class="text-xs font-bold">Hydration Hero</p>
+                </div>
+                <div class="text-center p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg">
+                    <div class="text-3xl mb-2">🥗</div>
+                    <p class="text-xs font-bold">Veggie Lover</p>
+                </div>
+                <div class="text-center p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+                    <div class="text-3xl mb-2">⚡</div>
+                    <p class="text-xs font-bold">Energy Boost</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Sidebar Toggle for Mobile
+        const sidebar = document.getElementById('sidebar');
+        const toggle = document.getElementById('sidebar-toggle');
+        const backdrop = document.getElementById('sidebar-backdrop');
+
+        toggle.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+            backdrop.classList.toggle('opacity-0');
+            backdrop.classList.toggle('pointer-events-none');
+        });
+
+        // Close sidebar when clicking backdrop
+        backdrop.addEventListener('click', () => {
+            sidebar.classList.add('-translate-x-full');
+            backdrop.classList.add('opacity-0');
+            backdrop.classList.add('pointer-events-none');
+        });
+
+        // Close sidebar when clicking main content on mobile
+        document.querySelector('main').addEventListener('click', () => {
+            if (window.innerWidth < 1024) {
+                sidebar.classList.add('-translate-x-full');
+                backdrop.classList.add('opacity-0');
+                backdrop.classList.add('pointer-events-none');
+            }
+        });
+    </script>
+</body>
+
+</html>

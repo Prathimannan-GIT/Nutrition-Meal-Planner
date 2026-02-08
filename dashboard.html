@@ -26,12 +26,11 @@
     <link rel="stylesheet" href="index.css">
 </head>
 
-<body
-    class="bg-slate-50 dark:bg-slate-950 flex min-h-screen relative overflow-x-hidden text-slate-900 dark:text-slate-100">
+<body class="pt-[80px] bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100">
 
     <!-- Sidebar -->
     <aside id="sidebar"
-        class="fixed inset-y-0 left-0 w-72 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 z-50 -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
+        class="fixed inset-y-0 left-0 w-72 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 z-40 -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
         <div class="h-full flex flex-col p-8">
             <a href="index.html" class="flex items-center gap-3 mb-12">
                 <img src="assets/logo.png" alt="Logo" class="w-10 h-10">
@@ -43,11 +42,11 @@
                     class="flex items-center gap-4 px-5 py-4 rounded-2xl bg-emerald-500 text-white shadow-lg shadow-emerald-500/20 font-bold transition-all">
                     <span class="text-xl">🏠</span> Dashboard
                 </a>
-                <a href="#meal-plan"
+                <a href="meal-plan.html"
                     class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
                     <span class="text-xl">📅</span> Meal Calendar
                 </a>
-                <a href="#stats"
+                <a href="stats.html"
                     class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
                     <span class="text-xl">📊</span> Progress Stats
                 </a>
@@ -55,11 +54,11 @@
                     class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
                     <span class="text-xl">🥗</span> Recipes Hub
                 </a>
-                <a href="#grocery"
+                <a href="grocery.html"
                     class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
                     <span class="text-xl">🛒</span> Grocery List
                 </a>
-                <a href="#"
+                <a href="settings.html"
                     class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
                     <span class="text-xl">⚙️</span> Settings
                 </a>
@@ -76,11 +75,11 @@
 
     <!-- Mobile Sidebar Backdrop -->
     <div id="sidebar-backdrop"
-        class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 opacity-0 pointer-events-none lg:hidden transition-opacity duration-300">
+        class="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 opacity-0 pointer-events-none lg:hidden transition-opacity duration-300">
     </div>
 
     <!-- Main Content Area -->
-    <main class="flex-1 lg:ml-72 min-h-screen p-6 lg:p-10">
+    <main class="lg:pl-72 min-h-screen p-4 sm:p-6 lg:p-10">
         <!-- Top Navigation -->
         <header class="flex items-center justify-between mb-10">
             <div class="flex items-center gap-6">
