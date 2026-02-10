@@ -1,0 +1,94 @@
+// This is a template for the hamburger menu fix
+// Apply this structure to all dashboard subpages
+
+// 1. Update body class to include flex
+<body class="pt-[80px] bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex min-h-screen">
+
+// 2. Update sidebar structure
+<aside id="sidebar"
+    class="fixed inset-y-0 left-0 z-50 w-72 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 transform -translate-x-full transition-all duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-auto">
+    <div class="h-full flex flex-col">
+        <!-- Logo Section -->
+        <div class="flex items-center justify-between p-6 border-b border-slate-200 dark:border-slate-800">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="assets/logo.png" alt="Logo" class="w-10 h-10">
+                <span class="text-xl lg:text-2xl font-bold text-emerald-600 font-outfit">Nutri Planner</span>
+            </a>
+            <button id="sidebar-close" class="max-md:flex p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Navigation with nav-item classes and nav-text spans -->
+        <nav class="flex-1 overflow-y-auto p-4 space-y-2">
+            <!-- Navigation items with proper structure -->
+        </nav>
+
+        <!-- User Profile & Logout -->
+        <div class="p-4 border-t border-slate-200 dark:border-slate-800 space-y-2">
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-lg">
+                    AJ
+                </div>
+                <div class="flex-1 min-w-0">
+                    <p class="text-sm font-bold truncate">Alex Johnson</p>
+                    <p class="text-xs text-slate-500 uppercase font-black">Pro Member</p>
+                </div>
+            </div>
+            <a href="login.html"
+                class="flex items-center gap-4 px-5 py-3 rounded-2xl text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 transition-all font-bold">
+                <span class="text-xl">🚪</span>
+                <span class="nav-text">Logout</span>
+            </a>
+        </div>
+    </div>
+</aside>
+
+// 3. Update backdrop
+<div id="sidebar-backdrop"
+    class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 max-md:block">
+</div>
+
+// 4. Update main content
+<div id="main-content" class="flex-1 lg:ml-72 min-h-screen transition-all duration-300">
+
+// 5. Update header structure
+<header class="sticky top-0 z-30 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-b border-slate-200 dark:border-slate-800 p-4 sm:p-6 lg:p-8">
+    <div class="flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <div>
+                <h1 class="text-2xl lg:text-3xl font-bold font-outfit">[PAGE TITLE]</h1>
+                <p class="text-slate-500 text-sm lg:text-base">[PAGE DESCRIPTION]</p>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <button id="sidebar-toggle"
+                class="max-md:flex p-3 bg-emerald-500 dark:bg-emerald-600 text-white rounded-xl shadow-sm border border-emerald-200 dark:border-emerald-700 hover:bg-emerald-600 dark:hover:bg-emerald-700 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <div class="hidden sm:flex items-center gap-4">
+                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors relative">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                    </svg>
+                    <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                </button>
+                <div class="flex items-center gap-4 p-2 pl-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                    <div class="text-right">
+                        <p class="text-sm font-bold">Alex Johnson</p>
+                        <p class="text-[10px] text-slate-500 uppercase font-black">Pro Member</p>
+                    </div>
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-lg">
+                        AJ</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+// 6. Add the complete JavaScript from dashboard.html

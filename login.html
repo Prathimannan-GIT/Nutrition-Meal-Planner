@@ -11,15 +11,19 @@
         tailwind.config = { darkMode: 'class', theme: { extend: { colors: { emerald: { 500: '#10b981', 600: '#059669' } }, fontFamily: { outfit: ['Outfit', 'sans-serif'], inter: ['Inter', 'sans-serif'] } } } }
     </script>
     <link rel="stylesheet" href="index.css">
+    <script src="theme.js"></script>
 </head>
 
-<body class="bg-slate-50 dark:bg-slate-950 flex items-center justify-center min-h-screen p-4">
+<body class="bg-slate-50 dark:bg-slate-950 flex items-center justify-center h-screen p-4 overflow-hidden">
 
-    <div class="max-w-md w-full animate-fade-in-up">
-        <div class="card p-10 space-y-8 flex flex-col items-center">
+    <!-- Dark Mode Toggle -->
+    
+
+    <div class="max-w-md w-full animate-fade-in-up max-h-full overflow-y-auto">
+        <div class="card p-6 sm:p-8 space-y-6 flex flex-col items-center">
             <!-- Branding -->
-            <a href="index.html" class="flex items-center gap-3 decoration-none">
-                <img src="assets/logo.png" alt="Logo" class="w-10 h-10">
+            <a href="index.html" class="flex items-center gap-3 decoration-none group">
+                <img src="assets/logo.png" alt="Logo" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
                 <span class="text-2xl font-bold text-emerald-600 dark:text-emerald-400">Nutri Planner</span>
             </a>
 
@@ -56,7 +60,7 @@
 
             <div class="w-full grid grid-cols-2 gap-4">
                 <button
-                    class="btn border border-slate-200 dark:border-slate-800 gap-2 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors text-sm">
+                    class="btn border border-slate-200 dark:border-slate-800 gap-2 hover:bg-slate-50 dark:hover:bg-slate-900 hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-md hover:scale-105 transition-all duration-200 text-sm">
                     <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
@@ -72,7 +76,7 @@
                             fill="#EA4335" />
                     </svg> Google
                 </button>
-                <button class="btn bg-[#1877F2] text-white gap-2 hover:opacity-90 transition-opacity text-sm">
+                <button class="btn bg-[#1877F2] text-white gap-2 hover:bg-[#166FE5] hover:shadow-lg hover:scale-105 transition-all duration-200 text-sm">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path
                             d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -87,6 +91,7 @@
         </div>
     </div>
 
+<script src="theme.js"></script>
 </body>
 
 </html>

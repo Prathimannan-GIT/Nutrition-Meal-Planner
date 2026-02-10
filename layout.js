@@ -69,34 +69,44 @@ function injectHeader() {
             </ul>
 
             <div class="flex items-center gap-2">
-                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                <button id="theme-toggle-desktop" class="hidden lg:flex p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
                     <span class="dark:hidden">🌙</span>
                     <span class="hidden dark:inline">☀️</span>
                 </button>
-                <a href="signup.html" class="hidden sm:flex btn btn-primary whitespace-nowrap">Join</a>
-                <button id="mobile-menu-btn" class="lg:hidden p-2 text-2xl">☰</button>
+                <a href="signup.html" class="hidden lg:flex btn btn-primary whitespace-nowrap">Join</a>
+                <button id="mobile-menu-btn" class="lg:hidden flex p-2 text-2xl">☰</button>
             </div>
         </nav>
 
         <!-- Mobile Side Menu -->
-        <div id="mobile-menu" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[60] opacity-0 pointer-events-none transition-opacity">
-            <div class="absolute top-0 left-0 bottom-0 w-[280px] bg-white dark:bg-slate-900 p-6 flex flex-col gap-6 shadow-2xl -translate-x-full transition-transform">
+        <div id="mobile-menu" class="fixed inset-0 bg-black/30 backdrop-blur-sm z-[60] opacity-0 pointer-events-none transition-opacity">
+            <div class="absolute top-0 right-0 bottom-0 w-[280px] bg-white dark:bg-slate-900 p-6 flex flex-col gap-6 shadow-2xl translate-x-full transition-transform">
                 <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-2">
-                         <img src="${LAYOUT_CONFIG.logoPath}" alt="Logo" class="w-8 h-8">
-                         <span class="font-bold">${LAYOUT_CONFIG.brandName}</span>
+                    <div class="flex items-center gap-2 group">
+                         <img src="${LAYOUT_CONFIG.logoPath}" alt="Logo" class="w-10 h-10 object-contain">
+                         <span class="text-xl font-bold text-emerald-600 dark:text-emerald-400 group-hover:scale-105 transition-transform whitespace-nowrap">${LAYOUT_CONFIG.brandName}</span>
                     </div>
-                    <button id="close-menu" class="text-2xl">&times;</button>
+                    <button id="close-menu" class="text-2xl text-slate-600 dark:text-slate-400 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">&times;</button>
                 </div>
-                <ul class="flex flex-col gap-4 text-lg">
-                    <li><a href="index.html" class="nav-link-mobile">Home</a></li>
-                    <li><a href="home2.html" class="nav-link-mobile">Home 2</a></li>
-                    <li><a href="features.html" class="nav-link-mobile">Features</a></li>
-                    <li><a href="plans.html" class="nav-link-mobile">Plans</a></li>
-                    <li><a href="recipes.html" class="nav-link-mobile">Recipes</a></li>
-                    <li><a href="pricing.html" class="nav-link-mobile">Pricing</a></li>
-                    <li><a href="dashboard.html" class="nav-link-mobile">Dashboard</a></li>
-                    <li><a href="support.html" class="nav-link-mobile">Support</a></li>
+                
+                <!-- Theme Toggle and Join Button -->
+                <div class="flex flex-col gap-3">
+                    <button id="theme-toggle" class="flex items-center justify-center gap-2 p-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors">
+                        <span class="dark:hidden">🌙 Dark Mode</span>
+                        <span class="hidden dark:inline">☀️ Light Mode</span>
+                    </button>
+                    <a href="signup.html" class="btn btn-primary w-full">Join Now</a>
+                </div>
+
+                <ul class="flex flex-col gap-2 text-lg">
+                    <li><a href="index.html" class="nav-link-mobile ${isPage('index.html') ? 'active' : ''}">🏠 Home</a></li>
+                    <li><a href="home2.html" class="nav-link-mobile ${isPage('home2.html') ? 'active' : ''}">🏠 Home 2</a></li>
+                    <li><a href="features.html" class="nav-link-mobile ${isPage('features.html') ? 'active' : ''}">⭐ Features</a></li>
+                    <li><a href="plans.html" class="nav-link-mobile ${isPage('plans.html') ? 'active' : ''}">📋 Plans</a></li>
+                    <li><a href="recipes.html" class="nav-link-mobile ${isPage('recipes.html') ? 'active' : ''}">🥗 Recipes</a></li>
+                    <li><a href="pricing.html" class="nav-link-mobile ${isPage('pricing.html') ? 'active' : ''}">💰 Pricing</a></li>
+                    <li><a href="dashboard.html" class="nav-link-mobile ${isPage('dashboard.html') ? 'active' : ''}">📊 Dashboard</a></li>
+                    <li><a href="support.html" class="nav-link-mobile ${isPage('support.html') ? 'active' : ''}">💬 Support</a></li>
                 </ul>
             </div>
         </div>
@@ -182,12 +192,12 @@ function initNavEvents() {
 
     mobileBtn?.addEventListener('click', () => {
         mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
-        menuContent.classList.remove('-translate-x-full');
+        menuContent.classList.remove('translate-x-full');
     });
 
     const close = () => {
         mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-        menuContent.classList.add('-translate-x-full');
+        menuContent.classList.add('translate-x-full');
     };
 
     closeBtn?.addEventListener('click', close);
@@ -195,20 +205,12 @@ function initNavEvents() {
         if (e.target === mobileMenu) close();
     });
 
-    // Theme toggle logic
-    const themeToggle = document.getElementById('theme-toggle');
-    const getTheme = () => localStorage.getItem('theme') || 'light';
-    const setTheme = (theme) => {
-        document.documentElement.setAttribute('data-theme', theme);
-        if (theme === 'dark') document.documentElement.classList.add('dark');
-        else document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', theme);
-    };
+    // Theme toggle is now handled by theme.js
+    // Just dispatch event to notify that layout was injected
+  
+    window.dispatchEvent(new CustomEvent('layoutinjected'));
 
-    setTheme(getTheme());
-    themeToggle?.addEventListener('click', () => {
-        setTheme(getTheme() === 'dark' ? 'light' : 'dark');
-    });
+
 }
 
 document.addEventListener('DOMContentLoaded', injectLayout);

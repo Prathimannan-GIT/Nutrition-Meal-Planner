@@ -37,6 +37,7 @@
         }
     </script>
     <link rel="stylesheet" href="index.css">
+    <script src="theme.js"></script>
     <style>
         .hero-pattern {
             background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
@@ -56,17 +57,17 @@
             </div>
         </div>
 
-        <div class="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8 animate-fade-in-up text-center lg:text-left">
+        <div class="container relative z-10 flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-12 lg:max-w-6xl lg:mx-auto">
+            <div class="flex-1 lg:flex-initial lg:max-w-lg space-y-8 animate-fade-in-up text-center lg:text-center xl:text-center">
                 <h1 class="font-outfit text-5xl md:text-7xl leading-tight">
                     Plan <span class="text-emerald-500">Smarter</span>.<br>
                     Eat Better. Live Healthier.
                 </h1>
-                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-xl">
+                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-xl mx-auto lg:mx-auto">
                     Personalized meal plans powered by nutrition science. Achieve your fitness goals with our AI-driven
                     tracking system.
                 </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-center xl:justify-center gap-4 pt-4">
                     <a href="signup.html" class="btn btn-primary px-10 text-lg w-full sm:w-auto">Start Free Trial</a>
                     <a href="features.html"
                         class="btn border-2 border-slate-200 dark:border-slate-800 hover:border-emerald-500 px-10 text-lg w-full sm:w-auto bg-white/50 backdrop-blur">Learn
@@ -96,7 +97,7 @@
     </section>
 
     <!-- Quick Benefits -->
-    <section class="py-20 bg-white dark:bg-slate-950">
+    <section class="py-20 bg-white dark:bg-slate-950 quick-benefits">
         <div class="container">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="card group hover:border-emerald-500 transition-all text-center">
@@ -137,15 +138,13 @@
 
     <!-- Featured Recipes Carousel -->
     <section class="py-20 bg-slate-50 dark:bg-slate-900/50">
-        <div class="container">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-                <div class="max-w-xl">
-                    <h2 class="mb-4">Featured Recipes</h2>
-                    <p class="text-slate-600 dark:text-slate-400">Hand-picked by our nutritionists for maximum flavor
-                        and health benefits.</p>
-                </div>
+        <div class="container text-center">
+            <div class="max-w-3xl mx-auto mb-12 space-y-6">
+                <h2 class="mb-4">Featured Recipes</h2>
+                <p class="text-slate-600 dark:text-slate-400">Hand-picked by our nutritionists for maximum flavor
+                    and health benefits.</p>
                 <a href="recipes.html"
-                    class="text-emerald-500 font-bold flex items-center gap-2 hover:gap-3 transition-all">View All
+                    class="text-emerald-500 font-bold flex items-center gap-2 hover:gap-3 transition-all justify-center">View All
                     Recipes <span>&rarr;</span></a>
             </div>
 
@@ -214,8 +213,8 @@
                 <div
                     class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all group">
                     <div class="aspect-square bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=500"
-                            alt="Greek Salad"
+                        <img src="https://images.unsplash.com/photo-1467307209279-ac062c5fc50d?auto=format&fit=crop&w=500&h=500&q=80"
+                            alt="Classic Greek Salad"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <span
                             class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold">10

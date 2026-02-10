@@ -11,6 +11,7 @@
         tailwind.config = { darkMode: 'class', theme: { extend: { colors: { emerald: { 500: '#10b981', 600: '#059669' } }, fontFamily: { outfit: ['Outfit', 'sans-serif'], inter: ['Inter', 'sans-serif'] } } } }
     </script>
     <link rel="stylesheet" href="index.css">
+    <script src="theme.js"></script>
 </head>
 
 <body class="pt-[80px]">
@@ -45,7 +46,7 @@
                         <li class="flex gap-3 text-sm text-slate-400">✕ Smart Grocery List</li>
                     </ul>
                     <a href="signup.html"
-                        class="btn border-2 border-slate-200 dark:border-slate-800 w-full text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Join
+                        class="btn border-2 border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 w-full text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700 hover:border-emerald-500 dark:hover:border-emerald-400 transition-all shadow-sm hover:shadow-md">Join
                         for
                         Free</a>
                 </div>
@@ -95,7 +96,7 @@
                         </li>
                     </ul>
                     <a href="signup.html"
-                        class="btn border-2 border-slate-200 dark:border-slate-800 w-full text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Save
+                        class="btn border-2 border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 w-full text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700 hover:border-emerald-500 dark:hover:border-emerald-400 transition-all shadow-sm hover:shadow-md">Save
                         with Annual</a>
                 </div>
             </div>
@@ -151,12 +152,12 @@
         </div>
     </section>
 
-    <section class="py-24 bg-slate-50 dark:bg-slate-900/50">
-        <div class="container text-center max-w-4xl space-y-16">
+    <section class="py-24 bg-gradient-to-br from-emerald-50 via-white to-slate-50 dark:from-emerald-900/20 dark:via-slate-900/50 dark:to-slate-900/20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-emerald-500/5 backdrop-blur-3xl"></div>
+        <div class="container text-center max-w-4xl space-y-16 relative z-10">
             <div class="space-y-4">
-                <h2 class="text-4xl font-outfit">The Value of <span class="text-emerald-500">Vibrancy.</span></h2>
-                <p class="text-lg text-slate-500">Compare the monthly cost of a Pro subscription to common daily
-                    expenses.</p>
+                <h2 class="text-4xl md:text-5xl font-outfit bg-gradient-to-r from-emerald-600 to-emerald-400 bg-clip-text text-transparent">The Value of <span class="text-emerald-500">Vibrancy.</span></h2>
+                <p class="text-lg text-slate-600 dark:text-slate-300 font-medium">Compare the monthly cost of a Pro subscription to common daily expenses.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -194,18 +195,15 @@
                             class="text-emerald-500">Better.</span></h2>
                     <p class="text-slate-400 text-lg">Looking to boost productivity and employee wellness? Our Corporate
                         Enterprise plans offer custom dashboards and dedicated nutritionists for your entire staff.</p>
-                    <ul class="space-y-3 inline-block text-left">
-                        <li class="flex items-center gap-3 text-sm"><span class="text-emerald-500">✔</span> Bulk license
-                            discounts</li>
-                        <li class="flex items-center gap-3 text-sm"><span class="text-emerald-500">✔</span> Monthly
-                            wellness reports</li>
-                        <li class="flex items-center gap-3 text-sm"><span class="text-emerald-500">✔</span> Private
-                            Slack/Teams integration</li>
+                    <ul class="space-y-4 text-center max-w-md mx-auto">
+                        <li class="flex items-center justify-center gap-3 text-base font-medium"><span class="text-emerald-400 text-lg">✔</span> Bulk license discounts</li>
+                        <li class="flex items-center justify-center gap-3 text-base font-medium"><span class="text-emerald-400 text-lg">✔</span> Monthly wellness reports</li>
+                        <li class="flex items-center justify-center gap-3 text-base font-medium"><span class="text-emerald-400 text-lg">✔</span> Private Slack/Teams integration</li>
                     </ul>
                 </div>
                 <div class="relative z-10">
                     <a href="support.html"
-                        class="btn bg-white text-slate-900 px-12 py-4 text-lg hover:bg-slate-100 transition-colors">
+                        class="btn bg-white text-slate-900 px-12 py-4 text-lg font-bold hover:bg-emerald-50 hover:scale-105 hover:shadow-xl hover:shadow-emerald-500/20 transition-all duration-300 border-2 border-transparent hover:border-emerald-200">
                         Enterprise</a>
                 </div>
             </div>

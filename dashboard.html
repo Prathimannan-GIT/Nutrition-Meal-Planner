@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Dashboard | Nutri Planner</title>
-    <link rel="icon" type="image/png" href="assets/logo.png">
+    <title>Nutri Planner - Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
-                    colors: {
-                        emerald: { 500: '#10b981', 600: '#059669' }
-                    },
+                    colors: { emerald: { 500: '#10b981', 600: '#059669' }},
                     fontFamily: {
                         outfit: ['Outfit', 'sans-serif'],
                         inter: ['Inter', 'sans-serif']
@@ -24,50 +20,78 @@
         }
     </script>
     <link rel="stylesheet" href="index.css">
+    <script src="theme.js"></script>
 </head>
 
-<body class="pt-[80px] bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100">
 
+    <div class="flex min-h-screen">
     <!-- Sidebar -->
     <aside id="sidebar"
-        class="fixed inset-y-0 left-0 w-72 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 z-40 -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
-        <div class="h-full flex flex-col p-8">
-            <a href="index.html" class="flex items-center gap-3 mb-12">
-                <img src="assets/logo.png" alt="Logo" class="w-10 h-10">
-                <span class="text-2xl font-bold text-emerald-600 font-outfit">Nutri Planner</span>
-            </a>
+        class="fixed inset-y-0 left-0 z-50 w-72 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 transform -translate-x-full transition-all duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-auto">
+        <div class="h-full flex flex-col">
+            <!-- Logo Section -->
+            <div class="flex items-center justify-between p-6 border-b border-slate-200 dark:border-slate-800">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="assets/logo.png" alt="Logo" class="w-10 h-10">
+                    <span class="text-xl lg:text-2xl font-bold text-emerald-600 font-outfit">Nutri Planner</span>
+                </a>
+                <button id="sidebar-close" class="lg:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
 
-            <nav class="flex-1 space-y-2">
+            <!-- Navigation -->
+            <nav class="flex-1 overflow-y-auto p-4 space-y-2">
                 <a href="dashboard.html"
-                    class="flex items-center gap-4 px-5 py-4 rounded-2xl bg-emerald-500 text-white shadow-lg shadow-emerald-500/20 font-bold transition-all">
-                    <span class="text-xl">🏠</span> Dashboard
+                    class="nav-item flex items-center gap-4 px-5 py-4 rounded-2xl bg-emerald-500 text-white shadow-lg shadow-emerald-500/20 font-bold transition-all">
+                    <span class="text-xl">🏠</span>
+                    <span class="nav-text">Dashboard</span>
                 </a>
                 <a href="meal-plan.html"
-                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
-                    <span class="text-xl">📅</span> Meal Calendar
+                    class="nav-item flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
+                    <span class="text-xl">📅</span>
+                    <span class="nav-text">Meal Calendar</span>
                 </a>
                 <a href="stats.html"
-                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
-                    <span class="text-xl">📊</span> Progress Stats
+                    class="nav-item flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
+                    <span class="text-xl">📊</span>
+                    <span class="nav-text">Progress Stats</span>
                 </a>
                 <a href="recipes.html"
-                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
-                    <span class="text-xl">🥗</span> Recipes Hub
+                    class="nav-item flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
+                    <span class="text-xl">🥗</span>
+                    <span class="nav-text">Recipes Hub</span>
                 </a>
                 <a href="grocery.html"
-                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
-                    <span class="text-xl">🛒</span> Grocery List
+                    class="nav-item flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
+                    <span class="text-xl">🛒</span>
+                    <span class="nav-text">Grocery List</span>
                 </a>
                 <a href="settings.html"
-                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
-                    <span class="text-xl">⚙️</span> Settings
+                    class="nav-item flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 transition-all">
+                    <span class="text-xl">⚙️</span>
+                    <span class="nav-text">Settings</span>
                 </a>
             </nav>
 
-            <div class="mt-auto pt-8 border-t border-slate-200 dark:border-slate-800">
+            <!-- User Profile & Logout -->
+            <div class="p-4 border-t border-slate-200 dark:border-slate-800 space-y-2">
+                <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-lg">
+                        AJ
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-bold truncate">Alex Johnson</p>
+                        <p class="text-xs text-slate-500 uppercase font-black">Pro Member</p>
+                    </div>
+                </div>
                 <a href="login.html"
-                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 transition-all font-bold">
-                    <span class="text-xl">🚪</span> Logout
+                    class="flex items-center gap-4 px-5 py-3 rounded-2xl text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 transition-all font-bold">
+                    <span class="text-xl">🚪</span>
+                    <span class="nav-text">Logout</span>
                 </a>
             </div>
         </div>
@@ -75,327 +99,354 @@
 
     <!-- Mobile Sidebar Backdrop -->
     <div id="sidebar-backdrop"
-        class="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 opacity-0 pointer-events-none lg:hidden transition-opacity duration-300">
+        class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden">
     </div>
 
-    <!-- Main Content Area -->
-    <main class="lg:pl-72 min-h-screen p-4 sm:p-6 lg:p-10">
-        <!-- Top Navigation -->
-        <header class="flex items-center justify-between mb-10">
-            <div class="flex items-center gap-6">
-                <button id="sidebar-toggle"
-                    class="lg:hidden p-3 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 text-2xl">☰</button>
-                <div>
-                    <h1 class="text-3xl font-bold font-outfit">Dashboard</h1>
-                    <p class="text-slate-500">Welcome back, Alex. Here's your daily summary.</p>
-                </div>
-            </div>
-
-            <div class="flex items-center gap-4">
-                <button
-                    class="w-12 h-12 flex items-center justify-center rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm text-xl relative">
-                    🔔
-                    <span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span>
+    <!-- Main Content -->
+<div id="main-content" class="flex-1 min-h-screen transition-all duration-300">
+    
+<header class="sticky top-0 z-30 bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b">
+  <div class="max-w-7xl xl:max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-6">
+    <div class="flex items-center justify-between">
+        <div>
+            <h1 class="text-3xl font-bold font-outfit">Dashboard</h1>
+            <p class="text-slate-500">Welcome back, Alex. Here's your daily summary.</p>
+        </div>
+        
+        <div class="flex items-center gap-4">
+            <button id="sidebar-toggle"
+                class="lg:hidden p-3 bg-emerald-500 dark:bg-emerald-600 text-white rounded-xl shadow-sm border border-emerald-200 dark:border-emerald-700 hover:bg-emerald-600 dark:hover:bg-emerald-700 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <div class="hidden sm:flex items-center gap-4">
+                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors relative">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                    </svg>
+                    <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
                 </button>
-                <div
-                    class="flex items-center gap-4 p-2 pl-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
-                    <div class="text-right hidden sm:block">
+                <div class="flex items-center gap-4 p-2 pl-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                    <div class="text-right">
                         <p class="text-sm font-bold">Alex Johnson</p>
                         <p class="text-[10px] text-slate-500 uppercase font-black">Pro Member</p>
                     </div>
-                    <div
-                        class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-lg">
-                        AJ</div>
-                </div>
-            </div>
-        </header>
-
-        <!-- Stats Grid -->
-        <div id="stats" class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-6 mb-10">
-            <div class="card md:col-span-1 border-emerald-500/20 bg-emerald-500/5">
-                <div class="flex items-center justify-between mb-2">
-                    <span class="text-emerald-600 font-bold text-xs uppercase tracking-widest">Calories Remaining</span>
-                    <span class="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center">🔥</span>
-                </div>
-                <div class="flex items-baseline gap-2">
-                    <span class="text-4xl font-bold">1,240</span>
-                    <span class="text-slate-500">kcal</span>
-                </div>
-                <div class="mt-4 h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
-                    <div class="h-full bg-emerald-500" style="width: 65%"></div>
-                </div>
-            </div>
-
-            <div class="card border-blue-500/20 bg-blue-500/5">
-                <div class="flex items-center justify-between mb-2">
-                    <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">Hydration</span>
-                    <span class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center">💧</span>
-                </div>
-                <div class="flex items-baseline gap-2">
-                    <span class="text-4xl font-bold">1.5</span>
-                    <span class="text-slate-500">/ 3.5 L</span>
-                </div>
-                <div class="mt-4 grid grid-cols-8 gap-1">
-                    <div class="h-2 bg-blue-500 rounded-full"></div>
-                    <div class="h-2 bg-blue-500 rounded-full"></div>
-                    <div class="h-2 bg-blue-500 rounded-full"></div>
-                    <div class="h-2 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
-                    <div class="h-2 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
-                    <div class="h-2 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
-                    <div class="h-2 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
-                    <div class="h-2 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
-                </div>
-            </div>
-
-            <div class="card border-orange-500/20 bg-orange-500/5">
-                <div class="flex items-center justify-between mb-2">
-                    <span class="text-orange-600 font-bold text-xs uppercase tracking-widest">Steps Today</span>
-                    <span class="w-8 h-8 rounded-lg bg-orange-100 flex items-center justify-center">👟</span>
-                </div>
-                <div class="flex items-baseline gap-2">
-                    <span class="text-4xl font-bold">8,420</span>
-                    <span class="text-slate-500">steps</span>
-                </div>
-                <p class="text-[10px] text-slate-500 mt-2">84% of daily goal (10,000)</p>
-            </div>
-
-            <div class="card border-purple-500/20 bg-purple-500/5">
-                <div class="flex items-center justify-between mb-2">
-                    <span class="text-purple-600 font-bold text-xs uppercase tracking-widest">Sleep Score</span>
-                    <span class="w-8 h-8 rounded-lg bg-purple-100 flex items-center justify-center">🌙</span>
-                </div>
-                <div class="flex items-baseline gap-2">
-                    <span class="text-4xl font-bold">88</span>
-                    <span class="text-slate-500">/ 100</span>
-                </div>
-                <p class="text-[10px] text-slate-500 mt-2">Excellent (7h 24m)</p>
-            </div>
-        </div>
-
-        <!-- Charts and Detailed Breakdown -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
-            <!-- Nutrition Goal Breakdown -->
-            <div class="card lg:col-span-2 space-y-8">
-                <div class="flex items-center justify-between">
-                    <h2 class="text-xl font-bold font-outfit">Calorie Intake Breakdown</h2>
-                    <div class="flex gap-2">
-                        <button class="px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold">W</button>
-                        <button class="px-3 py-1 rounded-lg bg-emerald-500 text-white text-xs font-bold">D</button>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-end">
-                            <span class="text-sm font-bold">Protein</span>
-                            <span class="text-xs text-slate-500">120g / 150g</span>
-                        </div>
-                        <div class="h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
-                            <div class="h-full bg-emerald-500 rounded-full" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-end">
-                            <span class="text-sm font-bold">Carbs</span>
-                            <span class="text-xs text-slate-500">180g / 220g</span>
-                        </div>
-                        <div class="h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
-                            <div class="h-full bg-blue-500 rounded-full" style="width: 82%"></div>
-                        </div>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-end">
-                            <span class="text-sm font-bold">Fats</span>
-                            <span class="text-xs text-slate-500">45g / 65g</span>
-                        </div>
-                        <div class="h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
-                            <div class="h-full bg-orange-500 rounded-full" style="width: 70%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Custom Graphic Placeholder -->
-                <div
-                    class="h-48 border-b border-l border-slate-200 dark:border-slate-800 relative flex items-end justify-between p-4 gap-4">
-                    <div class="flex-1 bg-emerald-500/20 rounded-t-xl group cursor-pointer hover:bg-emerald-500 transition-all relative"
-                        style="height: 40%">
-                        <span
-                            class="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">1200</span>
-                    </div>
-                    <div class="flex-1 bg-emerald-500/20 rounded-t-xl group cursor-pointer hover:bg-emerald-500 transition-all relative"
-                        style="height: 55%">
-                        <span
-                            class="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">1450</span>
-                    </div>
-                    <div class="flex-1 bg-emerald-500/20 rounded-t-xl group cursor-pointer hover:bg-emerald-500 transition-all relative"
-                        style="height: 70%">
-                        <span
-                            class="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">1800</span>
-                    </div>
-                    <div class="flex-1 bg-emerald-500 rounded-t-xl group cursor-pointer relative" style="height: 90%">
-                        <span
-                            class="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-100">2100</span>
-                    </div>
-                    <div class="flex-1 bg-emerald-500/20 rounded-t-xl group cursor-pointer hover:bg-emerald-500 transition-all relative"
-                        style="height: 60%">
-                        <span
-                            class="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">1600</span>
-                    </div>
-                    <div class="flex-1 bg-emerald-500/20 rounded-t-xl group cursor-pointer hover:bg-emerald-500 transition-all relative"
-                        style="height: 45%">
-                        <span
-                            class="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">1350</span>
-                    </div>
-                    <div class="flex-1 bg-emerald-500/20 rounded-t-xl group cursor-pointer hover:bg-emerald-500 transition-all relative"
-                        style="height: 35%">
-                        <span
-                            class="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">1100</span>
-                    </div>
-                </div>
-                <div class="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-widest px-4">
-                    <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
-                </div>
-            </div>
-
-            <!-- Meal Plan Widget -->
-            <div id="meal-plan" class="card space-y-6">
-                <div class="flex items-center justify-between">
-                    <h2 class="text-xl font-bold font-outfit">Today's Meal Plan</h2>
-                    <a href="#" class="text-xs text-emerald-500 font-bold hover:underline">Full Plan ➔</a>
-                </div>
-
-                <div class="space-y-4">
-                    <div
-                        class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border-l-4 border-orange-500">
-                        <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-2xl">🥣
-                        </div>
-                        <div>
-                            <p class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">08:00 AM •
-                                Breakfast</p>
-                            <p class="font-bold">Steel-Cut Oats with Berries</p>
-                        </div>
-                    </div>
-
-                    <div
-                        class="flex items-center gap-4 p-4 rounded-2xl bg-emerald-500/10 border-l-4 border-emerald-500 ring-4 ring-emerald-500/5">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center text-2xl">🥗
-                        </div>
-                        <div>
-                            <p class="text-[10px] text-emerald-600 font-bold uppercase tracking-wider">12:30 PM • Lunch
-                                (Now)</p>
-                            <p class="font-bold">Mediterranean Quinoa Bowl</p>
-                        </div>
-                    </div>
-
-                    <div
-                        class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border-l-4 border-slate-300 dark:border-slate-600 grayscale opacity-60">
-                        <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-2xl">🍎
-                        </div>
-                        <div>
-                            <p class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">04:00 PM • Snack
-                            </p>
-                            <p class="font-bold">Apple & Almond Butter</p>
-                        </div>
-                    </div>
-
-                    <div
-                        class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border-l-4 border-slate-300 dark:border-slate-600 grayscale opacity-60">
-                        <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-2xl">🥩
-                        </div>
-                        <div>
-                            <p class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">07:30 PM • Dinner
-                            </p>
-                            <p class="font-bold">Grilled Salmon & Asparagus</p>
-                        </div>
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-lg">
+                        AJ
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</header>
 
-        <!-- Recent Logs & Insights -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="card p-8">
-                <h3 class="text-xl font-bold font-outfit mb-6">Metabolic Insight</h3>
-                <div class="flex gap-6 items-start">
-                    <div
-                        class="w-16 h-16 shrink-0 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl">
-                        💡</div>
-                    <div class="space-y-3">
-                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed italic">"Your protein intake has
-                            been 15% higher this week than average. Our AI predicts an increase in metabolic recovery
-                            rate for your upcoming workouts."</p>
-                        <a href="blog.html" class="text-emerald-500 font-bold text-sm block hover:underline">Read full
-                            analysis ➔</a>
-                    </div>
-                </div>
-            </div>
+<main class="max-w-7xl xl:max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
 
-            <div id="grocery" class="card p-8">
-                <h3 class="text-xl font-bold font-outfit mb-6">Upcoming Grocery Refills</h3>
-                <div class="space-y-4">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Organic Spinach (250g)</span>
-                        </div>
-                        <span
-                            class="text-[10px] px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded-md font-bold text-slate-500 uppercase">Produce</span>
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Greek Yogurt (500ml)</span>
-                        </div>
-                        <span
-                            class="text-[10px] px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded-md font-bold text-slate-500 uppercase">Dairy</span>
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Almond Milk (1L)</span>
-                        </div>
-                        <span
-                            class="text-[10px] px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded-md font-bold text-slate-500 uppercase">Dairy</span>
-                    </div>
-                </div>
-            </div>
+  <!-- Weekly Overview -->
+  <section class="bg-white rounded-xl shadow p-6">
+    <h2 class="text-lg font-semibold mb-4">Weekly Overview</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div class="text-center">
+        <p class="text-sm text-gray-500">Avg Calories</p>
+        <p class="text-2xl font-bold">1,780 kcal</p>
+      </div>
+      <div class="text-center">
+        <p class="text-sm text-gray-500">Workout Days</p>
+        <p class="text-2xl font-bold">5 / 7</p>
+      </div>
+      <div class="text-center">
+        <p class="text-sm text-gray-500">Water Avg</p>
+        <p class="text-2xl font-bold">2.4 L</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Grid -->
+  <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+    <!-- Hydration -->
+    <div class="bg-blue-50 rounded-xl p-5">
+      <h3 class="font-semibold mb-2">Hydration</h3>
+      <p class="text-2xl font-bold">1.5 L</p>
+      <p class="text-sm text-gray-500">of 3.5 L</p>
+      <div class="w-full bg-blue-100 rounded-full h-2 mt-3">
+        <div class="bg-blue-500 h-2 rounded-full" style="width:43%"></div>
+      </div>
+    </div>
+
+    <!-- Steps -->
+    <div class="bg-orange-50 rounded-xl p-5">
+      <h3 class="font-semibold mb-2">Steps</h3>
+      <p class="text-2xl font-bold">8,420</p>
+      <p class="text-sm text-gray-500">Daily Goal 10,000</p>
+      <div class="w-full bg-orange-100 rounded-full h-2 mt-3">
+        <div class="bg-orange-500 h-2 rounded-full" style="width:84%"></div>
+      </div>
+    </div>
+
+    <!-- Sleep -->
+    <div class="bg-purple-50 rounded-xl p-5">
+      <h3 class="font-semibold mb-2">Sleep</h3>
+      <p class="text-2xl font-bold">88</p>
+      <p class="text-sm text-gray-500">Quality: Excellent</p>
+      <div class="w-full bg-purple-100 rounded-full h-2 mt-3">
+        <div class="bg-purple-500 h-2 rounded-full" style="width:88%"></div>
+      </div>
+    </div>
+
+    <!-- Active Minutes -->
+    <div class="bg-green-50 rounded-xl p-5">
+      <h3 class="font-semibold mb-2">Active Minutes</h3>
+      <p class="text-2xl font-bold">62 min</p>
+      <p class="text-sm text-gray-500">Daily Goal 60</p>
+      <div class="w-full bg-green-100 rounded-full h-2 mt-3">
+        <div class="bg-green-500 h-2 rounded-full" style="width:100%"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Calorie Intake Breakdown -->
+  <section class="bg-white rounded-xl shadow-lg p-6">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-xl font-bold text-slate-800">Calorie Intake Breakdown</h2>
+      <div class="flex gap-2">
+        <button class="px-4 py-2 rounded-lg bg-slate-100 text-slate-600 text-sm font-medium hover:bg-slate-200 transition-colors">Week</button>
+        <button class="px-4 py-2 rounded-lg bg-emerald-500 text-white text-sm font-medium hover:bg-emerald-600 transition-colors">Day</button>
+      </div>
+    </div>
+    
+    <!-- Enhanced Bar Chart -->
+    <div class="relative h-64 bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl p-6 mb-6">
+      <div class="absolute inset-0 flex items-end justify-between px-4 pb-4">
+        <div class="flex-1 flex flex-col items-center gap-2 group cursor-pointer">
+          <div class="w-full bg-gradient-to-t from-emerald-600 to-emerald-400 h-[20%] rounded-t-lg transition-all duration-300 group-hover:h-[25%] group-hover:from-emerald-700 group-hover:to-emerald-500 shadow-lg"></div>
+          <span class="text-xs font-bold text-slate-600 mt-2">Mon</span>
+          <span class="text-sm font-bold text-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity">1,200</span>
         </div>
-    </main>
+        <div class="flex-1 flex flex-col items-center gap-2 group cursor-pointer">
+          <div class="w-full bg-gradient-to-t from-emerald-600 to-emerald-400 h-[35%] rounded-t-lg transition-all duration-300 group-hover:h-[40%] group-hover:from-emerald-700 group-hover:to-emerald-500 shadow-lg"></div>
+          <span class="text-xs font-bold text-slate-600 mt-2">Tue</span>
+          <span class="text-sm font-bold text-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity">1,450</span>
+        </div>
+        <div class="flex-1 flex flex-col items-center gap-2 group cursor-pointer">
+          <div class="w-full bg-gradient-to-t from-emerald-600 to-emerald-400 h-[45%] rounded-t-lg transition-all duration-300 group-hover:h-[50%] group-hover:from-emerald-700 group-hover:to-emerald-500 shadow-lg"></div>
+          <span class="text-xs font-bold text-slate-600 mt-2">Wed</span>
+          <span class="text-sm font-bold text-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity">1,800</span>
+        </div>
+        <div class="flex-1 flex flex-col items-center gap-2 group cursor-pointer">
+          <div class="w-full bg-gradient-to-t from-emerald-600 to-emerald-400 h-[60%] rounded-t-lg transition-all duration-300 group-hover:h-[65%] group-hover:from-emerald-700 group-hover:to-emerald-500 shadow-lg"></div>
+          <span class="text-xs font-bold text-slate-600 mt-2">Thu</span>
+          <span class="text-sm font-bold text-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity">2,100</span>
+        </div>
+        <div class="flex-1 flex flex-col items-center gap-2 group cursor-pointer">
+          <div class="w-full bg-gradient-to-t from-emerald-700 to-emerald-500 h-[90%] rounded-t-lg transition-all duration-300 shadow-xl ring-2 ring-emerald-300 ring-opacity-50"></div>
+          <span class="text-xs font-bold text-emerald-700 mt-2">Fri</span>
+          <span class="text-sm font-bold text-emerald-700">2,100</span>
+        </div>
+        <div class="flex-1 flex flex-col items-center gap-2 group cursor-pointer">
+          <div class="w-full bg-gradient-to-t from-emerald-600 to-emerald-400 h-[55%] rounded-t-lg transition-all duration-300 group-hover:h-[60%] group-hover:from-emerald-700 group-hover:to-emerald-500 shadow-lg"></div>
+          <span class="text-xs font-bold text-slate-600 mt-2">Sat</span>
+          <span class="text-sm font-bold text-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity">1,600</span>
+        </div>
+        <div class="flex-1 flex flex-col items-center gap-2 group cursor-pointer">
+          <div class="w-full bg-gradient-to-t from-emerald-600 to-emerald-400 h-[40%] rounded-t-lg transition-all duration-300 group-hover:h-[45%] group-hover:from-emerald-700 group-hover:to-emerald-500 shadow-lg"></div>
+          <span class="text-xs font-bold text-slate-600 mt-2">Sun</span>
+          <span class="text-sm font-bold text-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity">1,350</span>
+        </div>
+      </div>
+      
+      <!-- Y-axis labels -->
+      <div class="absolute left-2 top-4 bottom-8 flex flex-col justify-between text-xs text-slate-400">
+        <span>2500</span>
+        <span>2000</span>
+        <span>1500</span>
+        <span>1000</span>
+        <span>500</span>
+        <span>0</span>
+      </div>
+    </div>
+    
+    <!-- Stats Summary -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
+        <p class="text-sm text-emerald-600 font-medium">Daily Average</p>
+        <p class="text-2xl font-bold text-emerald-700">1,657</p>
+        <p class="text-xs text-slate-500">calories</p>
+      </div>
+      <div class="text-center p-4 bg-blue-50 rounded-lg border border-blue-200">
+        <p class="text-sm text-blue-600 font-medium">Highest Day</p>
+        <p class="text-2xl font-bold text-blue-700">2,100</p>
+        <p class="text-xs text-slate-500">Thursday</p>
+      </div>
+      <div class="text-center p-4 bg-orange-50 rounded-lg border border-orange-200">
+        <p class="text-sm text-orange-600 font-medium">Lowest Day</p>
+        <p class="text-2xl font-bold text-orange-700">1,200</p>
+        <p class="text-xs text-slate-500">Monday</p>
+      </div>
+      <div class="text-center p-4 bg-purple-50 rounded-lg border border-purple-200">
+        <p class="text-sm text-purple-600 font-medium">Weekly Total</p>
+        <p class="text-2xl font-bold text-purple-700">11,600</p>
+        <p class="text-xs text-slate-500">calories</p>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        // Sidebar Toggle for Mobile
+</main>
+</div>
+
+<script>
+    // Wait for DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM loaded, initializing sidebar...');
+        
+        // Sidebar Elements
         const sidebar = document.getElementById('sidebar');
         const toggle = document.getElementById('sidebar-toggle');
+        const closeBtn = document.getElementById('sidebar-close');
         const backdrop = document.getElementById('sidebar-backdrop');
+        const mainContent = document.getElementById('main-content');
 
-        toggle.addEventListener('click', () => {
-            sidebar.classList.toggle('-translate-x-full');
-            backdrop.classList.toggle('opacity-0');
-            backdrop.classList.toggle('pointer-events-none');
-        });
+        // Debug: Log elements to console
+        console.log('Sidebar element:', sidebar);
+        console.log('Toggle element:', toggle);
+        console.log('Close button:', closeBtn);
+        console.log('Backdrop element:', backdrop);
+        console.log('Main content:', mainContent);
 
-        // Close sidebar when clicking backdrop
-        backdrop.addEventListener('click', () => {
-            sidebar.classList.add('-translate-x-full');
-            backdrop.classList.add('opacity-0');
-            backdrop.classList.add('pointer-events-none');
-        });
-
-        // Close sidebar when clicking main content on mobile
-        document.querySelector('main').addEventListener('click', () => {
-            if (window.innerWidth < 1024) {
-                sidebar.classList.add('-translate-x-full');
-                backdrop.classList.add('opacity-0');
-                backdrop.classList.add('pointer-events-none');
+        // Check if elements exist
+        if (toggle && sidebar && backdrop && closeBtn && mainContent) {
+            console.log('All elements found, adding event listeners');
+            
+            // Open sidebar function
+            function openSidebar() {
+                console.log('Opening sidebar');
+                sidebar.classList.remove('-translate-x-full');
+                sidebar.classList.add('translate-x-0');
+                backdrop.classList.remove('opacity-0', 'pointer-events-none');
+                backdrop.classList.add('opacity-100');
+                document.body.style.overflow = 'hidden'; // Prevent body scroll on mobile
             }
-        });
+            
+            // Close sidebar function
+            function closeSidebar() {
+                console.log('Closing sidebar');
+                sidebar.classList.add('-translate-x-full');
+                sidebar.classList.remove('translate-x-0');
+                backdrop.classList.add('opacity-0', 'pointer-events-none');
+                backdrop.classList.remove('opacity-100');
+                document.body.style.overflow = ''; // Restore body scroll
+            }
+            
+            // Toggle sidebar function
+            function toggleSidebar() {
+                const isOpen = sidebar.classList.contains('translate-x-0');
+                console.log('Toggle sidebar - isOpen:', isOpen);
+                if (isOpen) {
+                    closeSidebar();
+                } else {
+                    openSidebar();
+                }
+            }
+            
+            // Event listeners with mobile/tablet only logic
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                // Only toggle on mobile and tablet (below 1024px)
+                if (window.innerWidth < 1024) {
+                    console.log('Toggle button clicked (mobile/tablet)');
+                    toggleSidebar();
+                }
+            });
 
-        // Simple Notification feedback
-        document.querySelector('header button').addEventListener('click', function () {
-            this.querySelector('span').classList.add('hidden');
-            alert('Recent Notifications: \n- Your meal prep video is ready!\n- New metabolic insight available.');
-        });
-    </script>
+            closeBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Close button clicked');
+                closeSidebar();
+            });
+
+            // Close sidebar when clicking backdrop
+            backdrop.addEventListener('click', (e) => {
+                e.preventDefault();
+                console.log('Backdrop clicked');
+                closeSidebar();
+            });
+
+            // Close sidebar when clicking main content on mobile/tablet only
+            mainContent.addEventListener('click', (e) => {
+                if (window.innerWidth < 1024) {
+                    const isOpen = sidebar.classList.contains('translate-x-0');
+                    if (isOpen) {
+                        console.log('Closing sidebar on main content click');
+                        closeSidebar();
+                    }
+                }
+            });
+
+            // Close sidebar when clicking navigation links on mobile/tablet only
+            const navLinks = document.querySelectorAll('.nav-item');
+            console.log('Found nav links:', navLinks.length);
+            navLinks.forEach((link, index) => {
+                link.addEventListener('click', (e) => {
+                    console.log('Nav link clicked:', index);
+                    if (window.innerWidth < 1024) {
+                        const isOpen = sidebar.classList.contains('translate-x-0');
+                        if (isOpen) {
+                            console.log('Closing sidebar on nav link click');
+                            closeSidebar();
+                        }
+                    }
+                });
+            });
+
+            // Handle window resize with proper breakpoints
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    if (window.innerWidth >= 1024) {
+                        // Desktop: sidebar always visible, no overlay
+                        sidebar.classList.remove('-translate-x-full');
+                        sidebar.classList.add('translate-x-0');
+                        backdrop.classList.add('opacity-0', 'pointer-events-none');
+                        backdrop.classList.remove('opacity-100');
+                        document.body.style.overflow = '';
+                    } else {
+                        // Mobile/Tablet: sidebar hidden by default
+                        sidebar.classList.add('-translate-x-full');
+                        sidebar.classList.remove('translate-x-0');
+                        backdrop.classList.add('opacity-0', 'pointer-events-none');
+                        backdrop.classList.remove('opacity-100');
+                        document.body.style.overflow = '';
+                    }
+                }, 250);
+            });
+
+            // Initialize sidebar state on load based on screen size
+            if (window.innerWidth >= 1024) {
+                // Desktop: sidebar always visible
+                sidebar.classList.remove('-translate-x-full');
+                sidebar.classList.add('translate-x-0');
+                backdrop.classList.add('opacity-0', 'pointer-events-none');
+                backdrop.classList.remove('opacity-100');
+                document.body.style.overflow = '';
+            } else {
+                // Mobile and Tablet: sidebar hidden by default
+                sidebar.classList.add('-translate-x-full');
+                sidebar.classList.remove('translate-x-0');
+                backdrop.classList.add('opacity-0', 'pointer-events-none');
+                backdrop.classList.remove('opacity-100');
+                document.body.style.overflow = '';
+            }
+
+        } else {
+            console.error('Missing elements:', { sidebar, toggle, backdrop, closeBtn, mainContent });
+        }
+    });
+</script>
+</div>
 </body>
-
 </html>

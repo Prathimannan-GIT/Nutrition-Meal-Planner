@@ -11,9 +11,13 @@
         tailwind.config = { darkMode: 'class', theme: { extend: { colors: { emerald: { 500: '#10b981', 600: '#059669' } }, fontFamily: { outfit: ['Outfit', 'sans-serif'], inter: ['Inter', 'sans-serif'] } } } }
     </script>
     <link rel="stylesheet" href="index.css">
+    <script src="theme.js"></script>
 </head>
 
 <body class="bg-slate-50 dark:bg-slate-950 flex items-center justify-center min-h-screen p-4 py-12">
+
+    <!-- Dark Mode Toggle -->
+    
 
     <div class="max-w-md w-full animate-fade-in-up">
         <div class="card p-10 space-y-8 flex flex-col items-center">
@@ -57,11 +61,17 @@
                 <div class="flex-1 h-px bg-slate-200 dark:bg-slate-800"></div>
             </div>
 
-            <div class="w-full">
+            <div class="w-full grid grid-cols-2 gap-4">
                 <button
-                    class="btn border border-slate-200 dark:border-slate-800 gap-2 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors text-sm w-full">
-                    <img src="https://www.svgrepo.com/show/355037/google.svg" class="w-5 h-5" alt="Google"> Sign up with
-                    Google
+                    class="btn border border-slate-200 dark:border-slate-800 gap-2 hover:bg-slate-50 dark:hover:bg-slate-900 hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-md hover:scale-105 transition-all duration-200 text-sm">
+                    <img src="https://www.svgrepo.com/show/355037/google.svg" class="w-5 h-5" alt="Google"> Google
+                </button>
+                <button class="btn bg-[#1877F2] text-white gap-2 hover:bg-[#166FE5] hover:shadow-lg hover:scale-105 transition-all duration-200 text-sm">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                    Facebook
                 </button>
             </div>
 
@@ -71,6 +81,7 @@
         </div>
     </div>
 
+<script src="theme.js"></script>
 </body>
 
 </html>
