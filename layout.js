@@ -150,8 +150,8 @@ function injectFooter() {
                     </a>
                 </div>
             </div>
-            <div>
-                <h4 class="mb-4">Resources</h4>
+            <div class="text-left">
+                <h4 class="mb-4 text-left">Resources</h4>
                 <ul class="flex flex-col gap-2">
                     <li><a href="blog.html" class="footer-link">Blog</a></li>
                     <li><a href="recipes.html" class="footer-link">Recipes</a></li>
@@ -159,8 +159,8 @@ function injectFooter() {
                     <li><a href="how-it-works.html" class="footer-link">How It Works</a></li>
                 </ul>
             </div>
-            <div>
-                <h4 class="mb-4">Program</h4>
+            <div class="text-left">
+                <h4 class="mb-4 text-left">Program</h4>
                 <ul class="flex flex-col gap-2">
                     <li><a href="plans.html" class="footer-link">Weight Loss</a></li>
                     <li><a href="plans.html" class="footer-link">Muscle Building</a></li>
@@ -168,8 +168,8 @@ function injectFooter() {
                     <li><a href="plans.html" class="footer-link">Family Plans</a></li>
                 </ul>
             </div>
-            <div>
-                <h4 class="mb-4">Legal</h4>
+            <div class="text-left">
+                <h4 class="mb-4 text-left">Legal</h4>
                 <ul class="flex flex-col gap-2">
                     <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
                     <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
