@@ -57,7 +57,7 @@ function injectHeader() {
             </a>
             
             <!-- Desktop Nav -->
-            <ul class="hidden lg:flex items-center gap-3">
+            <ul class="hidden lg:flex items-center lg:gap-4 xl:gap-8">
                 <li><a href="index.html" class="nav-link ${isPage('index.html') ? 'active' : ''}">Home</a></li>
                 <li><a href="home2.html" class="nav-link ${isPage('home2.html') ? 'active' : ''}">Home 2</a></li>
                 <li><a href="features.html" class="nav-link ${isPage('features.html') ? 'active' : ''}">Features</a></li>
@@ -207,7 +207,7 @@ function initNavEvents() {
 
     // Theme toggle is now handled by theme.js
     // Just dispatch event to notify that layout was injected
-  
+
     window.dispatchEvent(new CustomEvent('layoutinjected'));
 
 
