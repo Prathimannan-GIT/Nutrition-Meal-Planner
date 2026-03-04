@@ -27,7 +27,7 @@
     <script src="theme.js"></script>
 </head>
 
-<body class="pt-[80px] bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex min-h-screen">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex min-h-screen">
 
     <!-- Sidebar -->
     <aside id="sidebar"
@@ -39,9 +39,11 @@
                     <img src="assets/logo.png" alt="Logo" class="w-10 h-10">
                     <span class="text-xl lg:text-2xl font-bold text-emerald-600 font-outfit">Nutri Planner</span>
                 </a>
-                <button id="sidebar-close" class="lg:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <button id="sidebar-close"
+                    class="lg:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
                     </svg>
                 </button>
             </div>
@@ -83,7 +85,8 @@
             <!-- User Profile & Logout -->
             <div class="p-4 border-t border-slate-200 dark:border-slate-800 space-y-2">
                 <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-lg">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-lg">
                         AJ
                     </div>
                     <div class="flex-1 min-w-0">
@@ -106,423 +109,434 @@
     </div>
 
     <!-- Main Content Area -->
-<div id="main-content" class="flex-1 min-h-screen transition-all duration-300">
-    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Top Navigation -->
-        <header class="sticky top-0 z-30 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-b border-slate-200 dark:border-slate-800 p-4 sm:p-6 lg:p-8">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center gap-4">
-                    <div>
-                        <h1 class="text-2xl lg:text-3xl font-bold font-outfit">Grocery List</h1>
-                        <p class="text-slate-500 text-sm lg:text-base">Smart shopping list based on your meal plan.</p>
+    <div id="main-content" class="flex-1 min-h-screen transition-all duration-300">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Top Navigation -->
+            <header
+                class="sticky top-0 z-30 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-b border-slate-200 dark:border-slate-800 p-4 sm:p-6 lg:p-8">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div>
+                            <h1 class="text-2xl lg:text-3xl font-bold font-outfit">Grocery List</h1>
+                            <p class="text-slate-500 text-sm lg:text-base">Smart shopping list based on your meal plan.
+                            </p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="flex items-center gap-4">
-                    <button id="sidebar-toggle"
-                        class="lg:hidden p-3 bg-emerald-500 dark:bg-emerald-600 text-white rounded-xl shadow-sm border border-emerald-200 dark:border-emerald-700 hover:bg-emerald-600 dark:hover:bg-emerald-700 transition-colors">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                    <div class="hidden sm:flex items-center gap-4">
-                        <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors relative">
+                    <div class="flex items-center gap-4">
+                        <button id="sidebar-toggle"
+                            class="lg:hidden p-3 bg-emerald-500 dark:bg-emerald-600 text-white rounded-xl shadow-sm border border-emerald-200 dark:border-emerald-700 hover:bg-emerald-600 dark:hover:bg-emerald-700 transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
                             </svg>
-                            <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
                         </button>
-                        <div class="flex items-center gap-4 p-2 pl-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
-                            <div class="text-right">
-                                <p class="text-sm font-bold">Alex Johnson</p>
-                                <p class="text-[10px] text-slate-500 uppercase font-black">Pro Member</p>
+                        <div class="hidden sm:flex items-center gap-4">
+                            <button
+                                class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors relative">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                                    </path>
+                                </svg>
+                                <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                            </button>
+                            <div
+                                class="flex items-center gap-4 p-2 pl-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                                <div class="text-right">
+                                    <p class="text-sm font-bold">Alex Johnson</p>
+                                    <p class="text-[10px] text-slate-500 uppercase font-black">Pro Member</p>
+                                </div>
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-lg">
+                                    AJ</div>
                             </div>
-                            <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-lg">
-                                AJ</div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </header>
+            </header>
 
-        <!-- Add Item Section -->
-        <div class="card p-6 mb-8">
-            <div class="flex flex-wrap gap-4">
-                <input type="text" placeholder="Add new item..." 
-                    class="flex-1 min-w-[200px] px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                <select class="px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                    <option>Produce</option>
-                    <option>Dairy</option>
-                    <option>Protein</option>
-                    <option>Grains</option>
-                    <option>Pantry</option>
-                    <option>Snacks</option>
-                </select>
-                <button class="px-6 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 font-bold">
-                    + Add Item
-                </button>
-            </div>
-        </div>
-
-        <!-- Grocery List Categories -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-            <!-- Produce -->
-            <div class="card p-6">
-                <div class="flex items-center justify-between mb-6">
-                    <h3 class="text-lg font-bold font-outfit flex items-center gap-2">
-                        <span class="text-2xl">🥬</span> Produce
-                    </h3>
-                    <span class="text-sm text-slate-500">6 items</span>
-                </div>
-                <div class="space-y-3">
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Organic Spinach</span>
-                        </div>
-                        <span class="text-xs text-slate-500">250g</span>
-                    </div>
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Kale</span>
-                        </div>
-                        <span class="text-xs text-slate-500">1 bunch</span>
-                    </div>
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg" checked>
-                            <span class="text-sm line-through text-slate-400">Bell Peppers</span>
-                        </div>
-                        <span class="text-xs text-slate-500">3 units</span>
-                    </div>
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Avocados</span>
-                        </div>
-                        <span class="text-xs text-slate-500">4 units</span>
-                    </div>
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Tomatoes</span>
-                        </div>
-                        <span class="text-xs text-slate-500">500g</span>
-                    </div>
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Asparagus</span>
-                        </div>
-                        <span class="text-xs text-slate-500">1 bunch</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Protein -->
-            <div class="card p-6">
-                <div class="flex items-center justify-between mb-6">
-                    <h3 class="text-lg font-bold font-outfit flex items-center gap-2">
-                        <span class="text-2xl">🥩</span> Protein
-                    </h3>
-                    <span class="text-sm text-slate-500">4 items</span>
-                </div>
-                <div class="space-y-3">
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Salmon Fillet</span>
-                        </div>
-                        <span class="text-xs text-slate-500">500g</span>
-                    </div>
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg" checked>
-                            <span class="text-sm line-through text-slate-400">Chicken Breast</span>
-                        </div>
-                        <span class="text-xs text-slate-500">1kg</span>
-                    </div>
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Eggs</span>
-                        </div>
-                        <span class="text-xs text-slate-500">18 units</span>
-                    </div>
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Greek Yogurt</span>
-                        </div>
-                        <span class="text-xs text-slate-500">500ml</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Dairy -->
-            <div class="card p-6">
-                <div class="flex items-center justify-between mb-6">
-                    <h3 class="text-lg font-bold font-outfit flex items-center gap-2">
-                        <span class="text-2xl">🥛</span> Dairy
-                    </h3>
-                    <span class="text-sm text-slate-500">3 items</span>
-                </div>
-                <div class="space-y-3">
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Almond Milk</span>
-                        </div>
-                        <span class="text-xs text-slate-500">1L</span>
-                    </div>
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Cheddar Cheese</span>
-                        </div>
-                        <span class="text-xs text-slate-500">200g</span>
-                    </div>
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Butter</span>
-                        </div>
-                        <span class="text-xs text-slate-500">250g</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pantry -->
-            <div class="card p-6">
-                <div class="flex items-center justify-between mb-6">
-                    <h3 class="text-lg font-bold font-outfit flex items-center gap-2">
-                        <span class="text-2xl">🥫</span> Pantry
-                    </h3>
-                    <span class="text-sm text-slate-500">5 items</span>
-                </div>
-                <div class="space-y-3">
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Quinoa</span>
-                        </div>
-                        <span class="text-xs text-slate-500">500g</span>
-                    </div>
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Olive Oil</span>
-                        </div>
-                        <span class="text-xs text-slate-500">500ml</span>
-                    </div>
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Almonds</span>
-                        </div>
-                        <span class="text-xs text-slate-500">200g</span>
-                    </div>
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Honey</span>
-                        </div>
-                        <span class="text-xs text-slate-500">250g</span>
-                    </div>
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
-                            <span class="text-sm">Steel-Cut Oats</span>
-                        </div>
-                        <span class="text-xs text-slate-500">1kg</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Summary Card -->
-        <div class="card p-6 bg-emerald-50 dark:bg-emerald-900/20 border-emerald-200 dark:border-emerald-800">
-            <div class="flex items-center justify-between">
-                <div>
-                    <h3 class="text-lg font-bold font-outfit text-emerald-700 dark:text-emerald-300">Shopping Summary</h3>
-                    <p class="text-sm text-emerald-600 dark:text-emerald-400">18 items remaining • 2 completed</p>
-                </div>
-                <div class="flex gap-3">
-                    <button class="px-4 py-2 bg-white dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 rounded-lg hover:bg-emerald-100 dark:hover:bg-emerald-900/30 font-bold">
-                        Clear Completed
-                    </button>
-                    <button class="px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 font-bold">
-                        Share List
+            <!-- Add Item Section -->
+            <div class="card p-6 mb-8">
+                <div class="flex flex-wrap gap-4">
+                    <input type="text" placeholder="Add new item..."
+                        class="flex-1 min-w-[200px] px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    <select
+                        class="px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                        <option>Produce</option>
+                        <option>Dairy</option>
+                        <option>Protein</option>
+                        <option>Grains</option>
+                        <option>Pantry</option>
+                        <option>Snacks</option>
+                    </select>
+                    <button class="px-6 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 font-bold">
+                        + Add Item
                     </button>
                 </div>
             </div>
-        </div>
-    </main>
 
-    <script>
-        // Wait for DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM loaded, initializing sidebar...');
-            
-            // Sidebar Elements
-            const sidebar = document.getElementById('sidebar');
-            const toggle = document.getElementById('sidebar-toggle');
-            const closeBtn = document.getElementById('sidebar-close');
-            const backdrop = document.getElementById('sidebar-backdrop');
-            const mainContent = document.getElementById('main-content');
+            <!-- Grocery List Categories -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                <!-- Produce -->
+                <div class="card p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-lg font-bold font-outfit flex items-center gap-2">
+                            <span class="text-2xl">🥬</span> Produce
+                        </h3>
+                        <span class="text-sm text-slate-500">6 items</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
+                                <span class="text-sm">Organic Spinach</span>
+                            </div>
+                            <span class="text-xs text-slate-500">250g</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
+                                <span class="text-sm">Kale</span>
+                            </div>
+                            <span class="text-xs text-slate-500">1 bunch</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg" checked>
+                                <span class="text-sm line-through text-slate-400">Bell Peppers</span>
+                            </div>
+                            <span class="text-xs text-slate-500">3 units</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
+                                <span class="text-sm">Avocados</span>
+                            </div>
+                            <span class="text-xs text-slate-500">4 units</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
+                                <span class="text-sm">Tomatoes</span>
+                            </div>
+                            <span class="text-xs text-slate-500">500g</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
+                                <span class="text-sm">Asparagus</span>
+                            </div>
+                            <span class="text-xs text-slate-500">1 bunch</span>
+                        </div>
+                    </div>
+                </div>
 
-            // Debug: Log elements to console
-            console.log('Sidebar element:', sidebar);
-            console.log('Toggle element:', toggle);
-            console.log('Close button:', closeBtn);
-            console.log('Backdrop element:', backdrop);
-            console.log('Main content:', mainContent);
+                <!-- Protein -->
+                <div class="card p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-lg font-bold font-outfit flex items-center gap-2">
+                            <span class="text-2xl">🥩</span> Protein
+                        </h3>
+                        <span class="text-sm text-slate-500">4 items</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
+                                <span class="text-sm">Salmon Fillet</span>
+                            </div>
+                            <span class="text-xs text-slate-500">500g</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg" checked>
+                                <span class="text-sm line-through text-slate-400">Chicken Breast</span>
+                            </div>
+                            <span class="text-xs text-slate-500">1kg</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
+                                <span class="text-sm">Eggs</span>
+                            </div>
+                            <span class="text-xs text-slate-500">18 units</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
+                                <span class="text-sm">Greek Yogurt</span>
+                            </div>
+                            <span class="text-xs text-slate-500">500ml</span>
+                        </div>
+                    </div>
+                </div>
 
-            // Check if elements exist
-            if (toggle && sidebar && backdrop && closeBtn && mainContent) {
-                console.log('All elements found, adding event listeners');
-                
-                // Open sidebar function
-                function openSidebar() {
-                    console.log('Opening sidebar');
-                    sidebar.classList.remove('-translate-x-full');
-                    sidebar.classList.add('translate-x-0');
-                    backdrop.classList.remove('opacity-0', 'pointer-events-none');
-                    backdrop.classList.add('opacity-100');
-                    document.body.style.overflow = 'hidden'; // Prevent body scroll on mobile
-                }
-                
-                // Close sidebar function
-                function closeSidebar() {
-                    console.log('Closing sidebar');
-                    sidebar.classList.add('-translate-x-full');
-                    sidebar.classList.remove('translate-x-0');
-                    backdrop.classList.add('opacity-0', 'pointer-events-none');
-                    backdrop.classList.remove('opacity-100');
-                    document.body.style.overflow = ''; // Restore body scroll
-                }
-                
-                // Toggle sidebar function
-                function toggleSidebar() {
-                    const isOpen = sidebar.classList.contains('translate-x-0');
-                    console.log('Toggle sidebar - isOpen:', isOpen);
-                    if (isOpen) {
-                        closeSidebar();
-                    } else {
-                        openSidebar();
-                    }
-                }
-                
-                // Event listeners with mobile/tablet only logic
-                toggle.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    // Only toggle on mobile and tablet (below 1024px)
-                    if (window.innerWidth < 1024) {
-                        console.log('Toggle button clicked (mobile/tablet)');
-                        toggleSidebar();
-                    }
-                });
+                <!-- Dairy -->
+                <div class="card p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-lg font-bold font-outfit flex items-center gap-2">
+                            <span class="text-2xl">🥛</span> Dairy
+                        </h3>
+                        <span class="text-sm text-slate-500">3 items</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
+                                <span class="text-sm">Almond Milk</span>
+                            </div>
+                            <span class="text-xs text-slate-500">1L</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
+                                <span class="text-sm">Cheddar Cheese</span>
+                            </div>
+                            <span class="text-xs text-slate-500">200g</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
+                                <span class="text-sm">Butter</span>
+                            </div>
+                            <span class="text-xs text-slate-500">250g</span>
+                        </div>
+                    </div>
+                </div>
 
-                closeBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    console.log('Close button clicked');
-                    closeSidebar();
-                });
+                <!-- Pantry -->
+                <div class="card p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-lg font-bold font-outfit flex items-center gap-2">
+                            <span class="text-2xl">🥫</span> Pantry
+                        </h3>
+                        <span class="text-sm text-slate-500">5 items</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
+                                <span class="text-sm">Quinoa</span>
+                            </div>
+                            <span class="text-xs text-slate-500">500g</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
+                                <span class="text-sm">Olive Oil</span>
+                            </div>
+                            <span class="text-xs text-slate-500">500ml</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
+                                <span class="text-sm">Almonds</span>
+                            </div>
+                            <span class="text-xs text-slate-500">200g</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
+                                <span class="text-sm">Honey</span>
+                            </div>
+                            <span class="text-xs text-slate-500">250g</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="accent-emerald-500 w-5 h-5 rounded-lg">
+                                <span class="text-sm">Steel-Cut Oats</span>
+                            </div>
+                            <span class="text-xs text-slate-500">1kg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                // Close sidebar when clicking backdrop
-                backdrop.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    console.log('Backdrop clicked');
-                    closeSidebar();
-                });
+            <!-- Summary Card -->
+            <div class="card p-6 bg-emerald-50 dark:bg-emerald-900/20 border-emerald-200 dark:border-emerald-800">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold font-outfit text-emerald-700 dark:text-emerald-300">Shopping
+                            Summary</h3>
+                        <p class="text-sm text-emerald-600 dark:text-emerald-400">18 items remaining • 2 completed</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <button
+                            class="px-4 py-2 bg-white dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 rounded-lg hover:bg-emerald-100 dark:hover:bg-emerald-900/30 font-bold">
+                            Clear Completed
+                        </button>
+                        <button class="px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 font-bold">
+                            Share List
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </main>
 
-                // Close sidebar when clicking main content on mobile/tablet only
-                mainContent.addEventListener('click', (e) => {
-                    if (window.innerWidth < 1024) {
-                        const isOpen = sidebar.classList.contains('translate-x-0');
-                        if (isOpen) {
-                            console.log('Closing sidebar on main content click');
-                            closeSidebar();
+            <script>
+                // Wait for DOM to be fully loaded
+                document.addEventListener('DOMContentLoaded', function () {
+                    console.log('DOM loaded, initializing sidebar...');
+
+                    // Sidebar Elements
+                    const sidebar = document.getElementById('sidebar');
+                    const toggle = document.getElementById('sidebar-toggle');
+                    const closeBtn = document.getElementById('sidebar-close');
+                    const backdrop = document.getElementById('sidebar-backdrop');
+                    const mainContent = document.getElementById('main-content');
+
+                    // Debug: Log elements to console
+                    console.log('Sidebar element:', sidebar);
+                    console.log('Toggle element:', toggle);
+                    console.log('Close button:', closeBtn);
+                    console.log('Backdrop element:', backdrop);
+                    console.log('Main content:', mainContent);
+
+                    // Check if elements exist
+                    if (toggle && sidebar && backdrop && closeBtn && mainContent) {
+                        console.log('All elements found, adding event listeners');
+
+                        // Open sidebar function
+                        function openSidebar() {
+                            console.log('Opening sidebar');
+                            sidebar.classList.remove('-translate-x-full');
+                            sidebar.classList.add('translate-x-0');
+                            backdrop.classList.remove('opacity-0', 'pointer-events-none');
+                            backdrop.classList.add('opacity-100');
+                            document.body.style.overflow = 'hidden'; // Prevent body scroll on mobile
                         }
-                    }
-                });
 
-                // Close sidebar when clicking navigation links on mobile/tablet only
-                const navLinks = document.querySelectorAll('.nav-item');
-                console.log('Found nav links:', navLinks.length);
-                navLinks.forEach((link, index) => {
-                    link.addEventListener('click', (e) => {
-                        console.log('Nav link clicked:', index);
-                        if (window.innerWidth < 1024) {
+                        // Close sidebar function
+                        function closeSidebar() {
+                            console.log('Closing sidebar');
+                            sidebar.classList.add('-translate-x-full');
+                            sidebar.classList.remove('translate-x-0');
+                            backdrop.classList.add('opacity-0', 'pointer-events-none');
+                            backdrop.classList.remove('opacity-100');
+                            document.body.style.overflow = ''; // Restore body scroll
+                        }
+
+                        // Toggle sidebar function
+                        function toggleSidebar() {
                             const isOpen = sidebar.classList.contains('translate-x-0');
+                            console.log('Toggle sidebar - isOpen:', isOpen);
                             if (isOpen) {
-                                console.log('Closing sidebar on nav link click');
                                 closeSidebar();
+                            } else {
+                                openSidebar();
                             }
                         }
-                    });
-                });
 
-                // Handle window resize with proper breakpoints
-                let resizeTimer;
-                window.addEventListener('resize', () => {
-                    clearTimeout(resizeTimer);
-                    resizeTimer = setTimeout(() => {
+                        // Event listeners with mobile/tablet only logic
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            // Only toggle on mobile and tablet (below 1024px)
+                            if (window.innerWidth < 1024) {
+                                console.log('Toggle button clicked (mobile/tablet)');
+                                toggleSidebar();
+                            }
+                        });
+
+                        closeBtn.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            console.log('Close button clicked');
+                            closeSidebar();
+                        });
+
+                        // Close sidebar when clicking backdrop
+                        backdrop.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            console.log('Backdrop clicked');
+                            closeSidebar();
+                        });
+
+                        // Close sidebar when clicking main content on mobile/tablet only
+                        mainContent.addEventListener('click', (e) => {
+                            if (window.innerWidth < 1024) {
+                                const isOpen = sidebar.classList.contains('translate-x-0');
+                                if (isOpen) {
+                                    console.log('Closing sidebar on main content click');
+                                    closeSidebar();
+                                }
+                            }
+                        });
+
+                        // Close sidebar when clicking navigation links on mobile/tablet only
+                        const navLinks = document.querySelectorAll('.nav-item');
+                        console.log('Found nav links:', navLinks.length);
+                        navLinks.forEach((link, index) => {
+                            link.addEventListener('click', (e) => {
+                                console.log('Nav link clicked:', index);
+                                if (window.innerWidth < 1024) {
+                                    const isOpen = sidebar.classList.contains('translate-x-0');
+                                    if (isOpen) {
+                                        console.log('Closing sidebar on nav link click');
+                                        closeSidebar();
+                                    }
+                                }
+                            });
+                        });
+
+                        // Handle window resize with proper breakpoints
+                        let resizeTimer;
+                        window.addEventListener('resize', () => {
+                            clearTimeout(resizeTimer);
+                            resizeTimer = setTimeout(() => {
+                                if (window.innerWidth >= 1024) {
+                                    // Desktop: sidebar always visible, no overlay
+                                    sidebar.classList.remove('-translate-x-full');
+                                    sidebar.classList.add('translate-x-0');
+                                    backdrop.classList.add('opacity-0', 'pointer-events-none');
+                                    backdrop.classList.remove('opacity-100');
+                                    document.body.style.overflow = '';
+                                } else {
+                                    // Mobile/Tablet: sidebar hidden by default
+                                    sidebar.classList.add('-translate-x-full');
+                                    sidebar.classList.remove('translate-x-0');
+                                    backdrop.classList.add('opacity-0', 'pointer-events-none');
+                                    backdrop.classList.remove('opacity-100');
+                                    document.body.style.overflow = '';
+                                }
+                            }, 250);
+                        });
+
+                        // Initialize sidebar state on load based on screen size
                         if (window.innerWidth >= 1024) {
-                            // Desktop: sidebar always visible, no overlay
+                            // Desktop: sidebar always visible
                             sidebar.classList.remove('-translate-x-full');
                             sidebar.classList.add('translate-x-0');
                             backdrop.classList.add('opacity-0', 'pointer-events-none');
                             backdrop.classList.remove('opacity-100');
                             document.body.style.overflow = '';
                         } else {
-                            // Mobile/Tablet: sidebar hidden by default
+                            // Mobile and Tablet: sidebar hidden by default
                             sidebar.classList.add('-translate-x-full');
                             sidebar.classList.remove('translate-x-0');
                             backdrop.classList.add('opacity-0', 'pointer-events-none');
                             backdrop.classList.remove('opacity-100');
                             document.body.style.overflow = '';
                         }
-                    }, 250);
-                });
 
-                // Initialize sidebar state on load based on screen size
-                if (window.innerWidth >= 1024) {
-                    // Desktop: sidebar always visible
-                    sidebar.classList.remove('-translate-x-full');
-                    sidebar.classList.add('translate-x-0');
-                    backdrop.classList.add('opacity-0', 'pointer-events-none');
-                    backdrop.classList.remove('opacity-100');
-                    document.body.style.overflow = '';
-                } else {
-                    // Mobile and Tablet: sidebar hidden by default
-                    sidebar.classList.add('-translate-x-full');
-                    sidebar.classList.remove('translate-x-0');
-                    backdrop.classList.add('opacity-0', 'pointer-events-none');
-                    backdrop.classList.remove('opacity-100');
-                    document.body.style.overflow = '';
-                }
-
-            } else {
-                console.error('Missing elements:', { sidebar, toggle, backdrop, closeBtn, mainContent });
-            }
-
-            // Checkbox interactions (preserve existing functionality)
-            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-                checkbox.addEventListener('change', function() {
-                    const label = this.nextElementSibling;
-                    if (this.checked) {
-                        label.classList.add('line-through', 'text-slate-400');
                     } else {
-                        label.classList.remove('line-through', 'text-slate-400');
+                        console.error('Missing elements:', { sidebar, toggle, backdrop, closeBtn, mainContent });
                     }
+
+                    // Checkbox interactions (preserve existing functionality)
+                    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                        checkbox.addEventListener('change', function () {
+                            const label = this.nextElementSibling;
+                            if (this.checked) {
+                                label.classList.add('line-through', 'text-slate-400');
+                            } else {
+                                label.classList.remove('line-through', 'text-slate-400');
+                            }
+                        });
+                    });
                 });
-            });
-        });
-    </script>
+            </script>
 </body>
 
 </html>

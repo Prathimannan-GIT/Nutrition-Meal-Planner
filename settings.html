@@ -27,7 +27,7 @@
     <script src="theme.js"></script>
 </head>
 
-<body class="pt-[80px] bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex min-h-screen">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex min-h-screen">
 
     <!-- Sidebar -->
     <aside id="sidebar"
@@ -39,9 +39,11 @@
                     <img src="assets/logo.png" alt="Logo" class="w-10 h-10">
                     <span class="text-xl lg:text-2xl font-bold text-emerald-600 font-outfit">Nutri Planner</span>
                 </a>
-                <button id="sidebar-close" class="lg:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <button id="sidebar-close"
+                    class="lg:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
                     </svg>
                 </button>
             </div>
@@ -83,7 +85,8 @@
             <!-- User Profile & Logout -->
             <div class="p-4 border-t border-slate-200 dark:border-slate-800 space-y-2">
                 <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-lg">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-lg">
                         AJ
                     </div>
                     <div class="flex-1 min-w-0">
@@ -106,343 +109,359 @@
     </div>
 
     <!-- Main Content Area -->
-<div id="main-content" class="flex-1 min-h-screen transition-all duration-300">
-    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Top Navigation -->
-        <header class="sticky top-0 z-30 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-b border-slate-200 dark:border-slate-800 p-4 sm:p-6 lg:p-8">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center gap-4">
-                    <div>
-                        <h1 class="text-2xl lg:text-3xl font-bold font-outfit">Settings</h1>
-                        <p class="text-slate-500 text-sm lg:text-base">Manage your account and preferences.</p>
+    <div id="main-content" class="flex-1 min-h-screen transition-all duration-300">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Top Navigation -->
+            <header
+                class="sticky top-0 z-30 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-b border-slate-200 dark:border-slate-800 p-4 sm:p-6 lg:p-8">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div>
+                            <h1 class="text-2xl lg:text-3xl font-bold font-outfit">Settings</h1>
+                            <p class="text-slate-500 text-sm lg:text-base">Manage your account and preferences.</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="flex items-center gap-4">
-                    <button id="sidebar-toggle"
-                        class="lg:hidden p-3 bg-emerald-500 dark:bg-emerald-600 text-white rounded-xl shadow-sm border border-emerald-200 dark:border-emerald-700 hover:bg-emerald-600 dark:hover:bg-emerald-700 transition-colors">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                    <div class="hidden sm:flex items-center gap-4">
-                        <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors relative">
+                    <div class="flex items-center gap-4">
+                        <button id="sidebar-toggle"
+                            class="lg:hidden p-3 bg-emerald-500 dark:bg-emerald-600 text-white rounded-xl shadow-sm border border-emerald-200 dark:border-emerald-700 hover:bg-emerald-600 dark:hover:bg-emerald-700 transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
                             </svg>
-                            <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
                         </button>
-                        <div class="flex items-center gap-4 p-2 pl-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
-                            <div class="text-right">
-                                <p class="text-sm font-bold">Alex Johnson</p>
-                                <p class="text-[10px] text-slate-500 uppercase font-black">Pro Member</p>
+                        <div class="hidden sm:flex items-center gap-4">
+                            <button
+                                class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors relative">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                                    </path>
+                                </svg>
+                                <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                            </button>
+                            <div
+                                class="flex items-center gap-4 p-2 pl-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                                <div class="text-right">
+                                    <p class="text-sm font-bold">Alex Johnson</p>
+                                    <p class="text-[10px] text-slate-500 uppercase font-black">Pro Member</p>
+                                </div>
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-lg">
+                                    AJ</div>
                             </div>
-                            <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-lg">
-                                AJ</div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </header>
+            </header>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <!-- Settings Navigation -->
-            <div class="lg:col-span-1">
-                <div class="card p-6">
-                    <nav class="space-y-2">
-                        <button class="w-full text-left px-4 py-3 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 font-bold border-l-4 border-emerald-500">
-                            Profile
-                        </button>
-                        <button class="w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
-                            Nutrition Goals
-                        </button>
-                        <button class="w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
-                            Notifications
-                        </button>
-                        <button class="w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
-                            Privacy & Security
-                        </button>
-                        <button class="w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
-                            Subscription
-                        </button>
-                    </nav>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Settings Navigation -->
+                <div class="lg:col-span-1">
+                    <div class="card p-6">
+                        <nav class="space-y-2">
+                            <button
+                                class="w-full text-left px-4 py-3 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 font-bold border-l-4 border-emerald-500">
+                                Profile
+                            </button>
+                            <button
+                                class="w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                                Nutrition Goals
+                            </button>
+                            <button
+                                class="w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                                Notifications
+                            </button>
+                            <button
+                                class="w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                                Privacy & Security
+                            </button>
+                            <button
+                                class="w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                                Subscription
+                            </button>
+                        </nav>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Settings Content -->
-            <div class="lg:col-span-2 space-y-8">
-                <!-- Profile Settings -->
-                <div class="card p-8">
-                    <h2 class="text-xl font-bold font-outfit mb-6">Profile Information</h2>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-6">
-                            <div class="w-20 h-20 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-2xl">
-                                AJ
+                <!-- Settings Content -->
+                <div class="lg:col-span-2 space-y-8">
+                    <!-- Profile Settings -->
+                    <div class="card p-8">
+                        <h2 class="text-xl font-bold font-outfit mb-6">Profile Information</h2>
+
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-6">
+                                <div
+                                    class="w-20 h-20 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-2xl">
+                                    AJ
+                                </div>
+                                <div>
+                                    <button
+                                        class="px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 font-bold text-sm">
+                                        Change Photo
+                                    </button>
+                                    <p class="text-xs text-slate-500 mt-1">JPG, PNG or GIF. Max 2MB.</p>
+                                </div>
                             </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-bold mb-2">First Name</label>
+                                    <input type="text" value="Alex"
+                                        class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold mb-2">Last Name</label>
+                                    <input type="text" value="Johnson"
+                                        class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                                </div>
+                            </div>
+
                             <div>
-                                <button class="px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 font-bold text-sm">
-                                    Change Photo
-                                </button>
-                                <p class="text-xs text-slate-500 mt-1">JPG, PNG or GIF. Max 2MB.</p>
+                                <label class="block text-sm font-bold mb-2">Email</label>
+                                <input type="email" value="alex.johnson@email.com"
+                                    class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-bold mb-2">Phone</label>
+                                <input type="tel" value="+1 (555) 123-4567"
+                                    class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-bold mb-2">Age</label>
+                                    <input type="number" value="32"
+                                        class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold mb-2">Gender</label>
+                                    <select
+                                        class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Other</option>
+                                        <option>Prefer not to say</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Physical Information -->
+                    <div class="card p-8">
+                        <h2 class="text-xl font-bold font-outfit mb-6">Physical Information</h2>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-sm font-bold mb-2">First Name</label>
-                                <input type="text" value="Alex" 
+                                <label class="block text-sm font-bold mb-2">Height (cm)</label>
+                                <input type="number" value="175"
                                     class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
                             </div>
                             <div>
-                                <label class="block text-sm font-bold mb-2">Last Name</label>
-                                <input type="text" value="Johnson" 
-                                    class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-bold mb-2">Email</label>
-                            <input type="email" value="alex.johnson@email.com" 
-                                class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-bold mb-2">Phone</label>
-                            <input type="tel" value="+1 (555) 123-4567" 
-                                class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-bold mb-2">Age</label>
-                                <input type="number" value="32" 
+                                <label class="block text-sm font-bold mb-2">Weight (kg)</label>
+                                <input type="number" value="76.8"
                                     class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
                             </div>
                             <div>
-                                <label class="block text-sm font-bold mb-2">Gender</label>
-                                <select class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                    <option>Male</option>
-                                    <option>Female</option>
-                                    <option>Other</option>
-                                    <option>Prefer not to say</option>
+                                <label class="block text-sm font-bold mb-2">Goal Weight (kg)</label>
+                                <input type="number" value="72"
+                                    class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2">Activity Level</label>
+                                <select
+                                    class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                                    <option>Sedentary</option>
+                                    <option selected>Lightly Active</option>
+                                    <option>Moderately Active</option>
+                                    <option>Very Active</option>
+                                    <option>Extra Active</option>
                                 </select>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Preferences -->
+
+
+                    <!-- Save Button -->
+
                 </div>
-
-                <!-- Physical Information -->
-                <div class="card p-8">
-                    <h2 class="text-xl font-bold font-outfit mb-6">Physical Information</h2>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-bold mb-2">Height (cm)</label>
-                            <input type="number" value="175" 
-                                class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold mb-2">Weight (kg)</label>
-                            <input type="number" value="76.8" 
-                                class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold mb-2">Goal Weight (kg)</label>
-                            <input type="number" value="72" 
-                                class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold mb-2">Activity Level</label>
-                            <select class="w-full px-4 py-2 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                <option>Sedentary</option>
-                                <option selected>Lightly Active</option>
-                                <option>Moderately Active</option>
-                                <option>Very Active</option>
-                                <option>Extra Active</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Preferences -->
-                
-
-                <!-- Save Button -->
-                
             </div>
-        </div>
-    </main>
+            </main>
 
-    <script>
-        // Wait for DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM loaded, initializing sidebar...');
-            
-            // Sidebar Elements
-            const sidebar = document.getElementById('sidebar');
-            const toggle = document.getElementById('sidebar-toggle');
-            const closeBtn = document.getElementById('sidebar-close');
-            const backdrop = document.getElementById('sidebar-backdrop');
-            const mainContent = document.getElementById('main-content');
+            <script>
+                // Wait for DOM to be fully loaded
+                document.addEventListener('DOMContentLoaded', function () {
+                    console.log('DOM loaded, initializing sidebar...');
 
-            // Debug: Log elements to console
-            console.log('Sidebar element:', sidebar);
-            console.log('Toggle element:', toggle);
-            console.log('Close button:', closeBtn);
-            console.log('Backdrop element:', backdrop);
-            console.log('Main content:', mainContent);
+                    // Sidebar Elements
+                    const sidebar = document.getElementById('sidebar');
+                    const toggle = document.getElementById('sidebar-toggle');
+                    const closeBtn = document.getElementById('sidebar-close');
+                    const backdrop = document.getElementById('sidebar-backdrop');
+                    const mainContent = document.getElementById('main-content');
 
-            // Check if elements exist
-            if (toggle && sidebar && backdrop && closeBtn && mainContent) {
-                console.log('All elements found, adding event listeners');
-                
-                // Open sidebar function
-                function openSidebar() {
-                    console.log('Opening sidebar');
-                    sidebar.classList.remove('-translate-x-full');
-                    sidebar.classList.add('translate-x-0');
-                    backdrop.classList.remove('opacity-0', 'pointer-events-none');
-                    backdrop.classList.add('opacity-100');
-                    document.body.style.overflow = 'hidden'; // Prevent body scroll on mobile
-                }
-                
-                // Close sidebar function
-                function closeSidebar() {
-                    console.log('Closing sidebar');
-                    sidebar.classList.add('-translate-x-full');
-                    sidebar.classList.remove('translate-x-0');
-                    backdrop.classList.add('opacity-0', 'pointer-events-none');
-                    backdrop.classList.remove('opacity-100');
-                    document.body.style.overflow = ''; // Restore body scroll
-                }
-                
-                // Toggle sidebar function
-                function toggleSidebar() {
-                    const isOpen = sidebar.classList.contains('translate-x-0');
-                    console.log('Toggle sidebar - isOpen:', isOpen);
-                    if (isOpen) {
-                        closeSidebar();
-                    } else {
-                        openSidebar();
-                    }
-                }
-                
-                // Event listeners with mobile/tablet only logic
-                toggle.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    // Only toggle on mobile and tablet (below 1024px)
-                    if (window.innerWidth < 1024) {
-                        console.log('Toggle button clicked (mobile/tablet)');
-                        toggleSidebar();
-                    }
-                });
+                    // Debug: Log elements to console
+                    console.log('Sidebar element:', sidebar);
+                    console.log('Toggle element:', toggle);
+                    console.log('Close button:', closeBtn);
+                    console.log('Backdrop element:', backdrop);
+                    console.log('Main content:', mainContent);
 
-                closeBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    console.log('Close button clicked');
-                    closeSidebar();
-                });
+                    // Check if elements exist
+                    if (toggle && sidebar && backdrop && closeBtn && mainContent) {
+                        console.log('All elements found, adding event listeners');
 
-                // Close sidebar when clicking backdrop
-                backdrop.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    console.log('Backdrop clicked');
-                    closeSidebar();
-                });
-
-                // Close sidebar when clicking main content on mobile/tablet only
-                mainContent.addEventListener('click', (e) => {
-                    if (window.innerWidth < 1024) {
-                        const isOpen = sidebar.classList.contains('translate-x-0');
-                        if (isOpen) {
-                            console.log('Closing sidebar on main content click');
-                            closeSidebar();
+                        // Open sidebar function
+                        function openSidebar() {
+                            console.log('Opening sidebar');
+                            sidebar.classList.remove('-translate-x-full');
+                            sidebar.classList.add('translate-x-0');
+                            backdrop.classList.remove('opacity-0', 'pointer-events-none');
+                            backdrop.classList.add('opacity-100');
+                            document.body.style.overflow = 'hidden'; // Prevent body scroll on mobile
                         }
-                    }
-                });
 
-                // Close sidebar when clicking navigation links on mobile/tablet only
-                const navLinks = document.querySelectorAll('.nav-item');
-                console.log('Found nav links:', navLinks.length);
-                navLinks.forEach((link, index) => {
-                    link.addEventListener('click', (e) => {
-                        console.log('Nav link clicked:', index);
-                        if (window.innerWidth < 1024) {
+                        // Close sidebar function
+                        function closeSidebar() {
+                            console.log('Closing sidebar');
+                            sidebar.classList.add('-translate-x-full');
+                            sidebar.classList.remove('translate-x-0');
+                            backdrop.classList.add('opacity-0', 'pointer-events-none');
+                            backdrop.classList.remove('opacity-100');
+                            document.body.style.overflow = ''; // Restore body scroll
+                        }
+
+                        // Toggle sidebar function
+                        function toggleSidebar() {
                             const isOpen = sidebar.classList.contains('translate-x-0');
+                            console.log('Toggle sidebar - isOpen:', isOpen);
                             if (isOpen) {
-                                console.log('Closing sidebar on nav link click');
                                 closeSidebar();
+                            } else {
+                                openSidebar();
                             }
                         }
-                    });
-                });
 
-                // Handle window resize with proper breakpoints
-                let resizeTimer;
-                window.addEventListener('resize', () => {
-                    clearTimeout(resizeTimer);
-                    resizeTimer = setTimeout(() => {
+                        // Event listeners with mobile/tablet only logic
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            // Only toggle on mobile and tablet (below 1024px)
+                            if (window.innerWidth < 1024) {
+                                console.log('Toggle button clicked (mobile/tablet)');
+                                toggleSidebar();
+                            }
+                        });
+
+                        closeBtn.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            console.log('Close button clicked');
+                            closeSidebar();
+                        });
+
+                        // Close sidebar when clicking backdrop
+                        backdrop.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            console.log('Backdrop clicked');
+                            closeSidebar();
+                        });
+
+                        // Close sidebar when clicking main content on mobile/tablet only
+                        mainContent.addEventListener('click', (e) => {
+                            if (window.innerWidth < 1024) {
+                                const isOpen = sidebar.classList.contains('translate-x-0');
+                                if (isOpen) {
+                                    console.log('Closing sidebar on main content click');
+                                    closeSidebar();
+                                }
+                            }
+                        });
+
+                        // Close sidebar when clicking navigation links on mobile/tablet only
+                        const navLinks = document.querySelectorAll('.nav-item');
+                        console.log('Found nav links:', navLinks.length);
+                        navLinks.forEach((link, index) => {
+                            link.addEventListener('click', (e) => {
+                                console.log('Nav link clicked:', index);
+                                if (window.innerWidth < 1024) {
+                                    const isOpen = sidebar.classList.contains('translate-x-0');
+                                    if (isOpen) {
+                                        console.log('Closing sidebar on nav link click');
+                                        closeSidebar();
+                                    }
+                                }
+                            });
+                        });
+
+                        // Handle window resize with proper breakpoints
+                        let resizeTimer;
+                        window.addEventListener('resize', () => {
+                            clearTimeout(resizeTimer);
+                            resizeTimer = setTimeout(() => {
+                                if (window.innerWidth >= 1024) {
+                                    // Desktop: sidebar always visible, no overlay
+                                    sidebar.classList.remove('-translate-x-full');
+                                    sidebar.classList.add('translate-x-0');
+                                    backdrop.classList.add('opacity-0', 'pointer-events-none');
+                                    backdrop.classList.remove('opacity-100');
+                                    document.body.style.overflow = '';
+                                } else {
+                                    // Mobile/Tablet: sidebar hidden by default
+                                    sidebar.classList.add('-translate-x-full');
+                                    sidebar.classList.remove('translate-x-0');
+                                    backdrop.classList.add('opacity-0', 'pointer-events-none');
+                                    backdrop.classList.remove('opacity-100');
+                                    document.body.style.overflow = '';
+                                }
+                            }, 250);
+                        });
+
+                        // Initialize sidebar state on load based on screen size
                         if (window.innerWidth >= 1024) {
-                            // Desktop: sidebar always visible, no overlay
+                            // Desktop: sidebar always visible
                             sidebar.classList.remove('-translate-x-full');
                             sidebar.classList.add('translate-x-0');
                             backdrop.classList.add('opacity-0', 'pointer-events-none');
                             backdrop.classList.remove('opacity-100');
                             document.body.style.overflow = '';
                         } else {
-                            // Mobile/Tablet: sidebar hidden by default
+                            // Mobile and Tablet: sidebar hidden by default
                             sidebar.classList.add('-translate-x-full');
                             sidebar.classList.remove('translate-x-0');
                             backdrop.classList.add('opacity-0', 'pointer-events-none');
                             backdrop.classList.remove('opacity-100');
                             document.body.style.overflow = '';
                         }
-                    }, 250);
-                });
 
-                // Initialize sidebar state on load based on screen size
-                if (window.innerWidth >= 1024) {
-                    // Desktop: sidebar always visible
-                    sidebar.classList.remove('-translate-x-full');
-                    sidebar.classList.add('translate-x-0');
-                    backdrop.classList.add('opacity-0', 'pointer-events-none');
-                    backdrop.classList.remove('opacity-100');
-                    document.body.style.overflow = '';
-                } else {
-                    // Mobile and Tablet: sidebar hidden by default
-                    sidebar.classList.add('-translate-x-full');
-                    sidebar.classList.remove('translate-x-0');
-                    backdrop.classList.add('opacity-0', 'pointer-events-none');
-                    backdrop.classList.remove('opacity-100');
-                    document.body.style.overflow = '';
-                }
-
-            } else {
-                console.error('Missing elements:', { sidebar, toggle, backdrop, closeBtn, mainContent });
-            }
-
-            // Toggle switches (preserve existing functionality)
-            document.querySelectorAll('button[class*="inline-flex h-6 w-11"]').forEach(toggle => {
-                toggle.addEventListener('click', function() {
-                    const span = this.querySelector('span');
-                    if (this.classList.contains('bg-emerald-500')) {
-                        this.classList.remove('bg-emerald-500');
-                        this.classList.add('bg-slate-200');
-                        span.classList.remove('translate-x-6');
-                        span.classList.add('translate-x-1');
                     } else {
-                        this.classList.remove('bg-slate-200');
-                        this.classList.add('bg-emerald-500');
-                        span.classList.remove('translate-x-1');
-                        span.classList.add('translate-x-6');
+                        console.error('Missing elements:', { sidebar, toggle, backdrop, closeBtn, mainContent });
                     }
+
+                    // Toggle switches (preserve existing functionality)
+                    document.querySelectorAll('button[class*="inline-flex h-6 w-11"]').forEach(toggle => {
+                        toggle.addEventListener('click', function () {
+                            const span = this.querySelector('span');
+                            if (this.classList.contains('bg-emerald-500')) {
+                                this.classList.remove('bg-emerald-500');
+                                this.classList.add('bg-slate-200');
+                                span.classList.remove('translate-x-6');
+                                span.classList.add('translate-x-1');
+                            } else {
+                                this.classList.remove('bg-slate-200');
+                                this.classList.add('bg-emerald-500');
+                                span.classList.remove('translate-x-1');
+                                span.classList.add('translate-x-6');
+                            }
+                        });
+                    });
                 });
-            });
-        });
-    </script>
+            </script>
 </body>
 
 </html>
